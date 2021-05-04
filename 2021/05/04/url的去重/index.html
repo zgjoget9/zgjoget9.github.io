@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="/asset/zgj.jpg"/>
         <link rel="canonical" href="http://guolinn.com/">
         <link rel="alternate" type="application/rss+xml" title="Zhang gaojie" href="">
-        <title>dasd | zgjoget9</title>
+        <title>url的去重 | zgjoget9</title>
         <meta name="description" content="{{meta_description}}">
 
         <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -46,12 +46,18 @@
         
 
 <article class="post">
-  May 3, 2021
+  May 4, 2021
   
 
-  <h1 class="post-title">dasd</h1>
+  <h1 class="post-title">url的去重</h1>
   <section class="post-content article-entry">
-    
+    <h2 id="url去重的六种方法"><a href="#url去重的六种方法" class="headerlink" title="url去重的六种方法"></a>url去重的六种方法</h2><h3 id="1-使用-Java-的-Set-集合判重"><a href="#1-使用-Java-的-Set-集合判重" class="headerlink" title="1.使用 Java 的 Set 集合判重"></a>1.使用 Java 的 Set 集合判重</h3><p>Set 集合天生具备不可重复性，使用它只能存储值不相同的元素，如果值相同添加就会失败，因此我们可以通过添加 Set 集合时的结果来判定 URL 是否重复</p>
+<h3 id="2-Redis-Set-集合去重"><a href="#2-Redis-Set-集合去重" class="headerlink" title="2.Redis Set 集合去重"></a>2.Redis Set 集合去重</h3><p>使用 Redis 的 Set 集合的实现思路和 Java 中的 Set 集合思想思路是一致的，都是利用 Set 的不可重复性实现的</p>
+<h3 id="3-数据库去重"><a href="#3-数据库去重" class="headerlink" title="3.数据库去重"></a>3.数据库去重</h3><p>我们也可以借助数据库实现 URL 的重复判断</p>
+<h3 id="4-唯一索引去重"><a href="#4-唯一索引去重" class="headerlink" title="4.唯一索引去重"></a>4.唯一索引去重</h3><p>我们也可以使用数据库的唯一索引来防止 URL 重复，它的实现思路和前面 Set 集合的思想思路非常像。</p>
+<h3 id="5-Guava-布隆过滤器去重"><a href="#5-Guava-布隆过滤器去重" class="headerlink" title="5.Guava 布隆过滤器去重"></a>5.Guava 布隆过滤器去重</h3><p>布隆过滤器（Bloom Filter）是1970年由布隆提出的。它实际上是一个很长的二进制向量和一系列随机映射函数。布隆过滤器可以用于检索一个元素是否在一个集合中。它的优点是空间效率和查询时间都远远超过一般的算法，缺点是有一定的误识别率和删除困难。</p>
+<h3 id="6-Redis-布隆过滤器去重"><a href="#6-Redis-布隆过滤器去重" class="headerlink" title="6.Redis 布隆过滤器去重"></a>6.Redis 布隆过滤器去重</h3><p>除了 Guava 的布隆过滤器，我们还可以使用 Redis 的布隆过滤器来实现 URL 判重。在使用之前，我们先要确保 Redis 服务器版本大于 4.0（此版本以上才支持布隆过滤器），并且开启了 Redis 布隆过滤器功能才能正常使用。</p>
+
   </section>
   <footer class="post-footer">
     <!--
@@ -65,15 +71,7 @@
 
 <nav class="pagination" role="pagination">
     
-    <a class="newer-posts" href="/2021/05/03/513asda/">
-        ← prev <!--513asda-->
-    </a>
-    
     <span class="page-number">•</span>
-    
-    <a class="older-posts" href="/2021/05/03/testpng/">
-        <!--testpng--> next →
-    </a>
     
 </nav>
 
