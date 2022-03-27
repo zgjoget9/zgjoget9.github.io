@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Url_filter",
+  
+  "datePublished": "2022-02-07T12:06:58+08:00",
+  "dateModified": "2022-02-07T12:06:58+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Zhang Gaojie",
+    
+    "image": "https://zgjoget9.github.io/img/avatar.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/02\/url_filter\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zhang Gaojie",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zgjoget9.github.io/img/avatar.jpg"
+    }
+    
+  },
+  "description": "",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Zhang Gaojie">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Url_filter">
+<meta name="twitter:title" content="Url_filter">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/02/url_filter/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/02/url_filter/">
+<meta property="og:site_name" content="Zhang Gaojie">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-02-07T12:06:58">
+  
+  
+    <meta property="article:modified_time" content="2022-02-07T12:06:58">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://zgjoget9.github.io/img/avatar.jpg">
+  <meta property="twitter:image" content="https://zgjoget9.github.io/img/avatar.jpg">
+
+
+
+
+
+
+    <title>Url_filter</title>
+
+    <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/02/url_filter/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://zgjoget9.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://zgjoget9.github.io/" aria-label="Go to homepage">Zhang Gaojie</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://zgjoget9.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://zgjoget9.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Zhang Gaojie</h4>
+        
+          <h5 class="sidebar-profile-bio">A Computer-science and Cyber-security novice</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/zgjoget9" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/18013715/jack-zhang" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Url_filter
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-07T12:06:58&#43;08:00">
+        
+  February 7, 2022
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <ul>
+<li>1.使用 Java 的 Set 集合判重</li>
+</ul>
+<p>Set 集合天生具备不可重复性，使用它只能存储值不相同的元素，如果值相同添加就会失败，因此我们可以通过添加 Set 集合时的结果来判定 URL 是否重复，实现代码如下：</p>
+<pre tabindex="0"><code>public class URLRepeat {
+    // 待去重 URL
+    public static final String[] URLS = {
+            &quot;www.apigo.cn&quot;,
+            &quot;www.baidu.com&quot;,
+            &quot;www.apigo.cn&quot;
+    };
+    public static void main(String[] args) {
+        Set&lt;String&gt; set = new HashSet();
+        for (int i = 0; i &lt; URLS.length; i++) {
+            String url = URLS[i];
+            boolean result = set.add(url);
+            if (!result) {
+                // 重复的 URL
+                System.out.println(&quot;URL 已存在了：&quot; + url);
+            }
+        }
+    }
+}
+</code></pre><ul>
+<li>2.Redis Set 集合去重
+使用 Redis 的 Set 集合的实现思路和 Java 中的 Set 集合思想思路是一致的，都是利用 Set 的不可重复性实现的，我们先使用 Redis 的客户端 redis-cli 来实现一下 URL 判重的示例：
+<img src="https://zgjoget9.github.io/img/url_1.png" alt="pic1"></li>
+</ul>
+<p>从上述结果可以看出，当添加成功时表示 URL 没有重复，但添加失败时（结果为 0）表示此 URL 已经存在了。
+我们再用代码的方式来实现一下 Redis 的 Set 去重，实现代码如下：</p>
+<pre tabindex="0"><code>// 待去重 URL
+public static final String[] URLS = {
+    &quot;www.apigo.cn&quot;,
+    &quot;www.baidu.com&quot;,
+    &quot;www.apigo.cn&quot;
+};
+
+@Autowired
+RedisTemplate redisTemplate;
+
+@RequestMapping(&quot;/url&quot;)
+public void urlRepeat() {
+    for (int i = 0; i &lt; URLS.length; i++) {
+        String url = URLS[i];
+        Long result = redisTemplate.opsForSet().add(&quot;urlrepeat&quot;, url);
+        if (result == 0) {
+            // 重复的 URL
+            System.out.println(&quot;URL 已存在了：&quot; + url);
+        }
+    }
+}
+</code></pre><ul>
+<li>3.数据库去重
+我们也可以借助数据库实现 URL 的重复判断，首先我们先来设计一张 URL 的存储表，如下图所示：</li>
+</ul>
+<p><img src="httpps://zgjoget9.github.io/img/url_2.png" alt="pic2"></p>
+<p>此表对应的 SQL 如下：</p>
+<pre tabindex="0"><code>/*==============================================================*/
+/* Table: urlinfo                                               */
+/*==============================================================*/
+create table urlinfo
+(
+   id                   int not null auto_increment,
+   url                  varchar(1000),
+   ctime                date,
+   del                  boolean,
+   primary key (id)
+);
+
+/*==============================================================*/
+/* Index: Index_url                                             */
+/*==============================================================*/
+create index Index_url on urlinfo
+(
+   url
+);
+</code></pre><p>其中 id 为自增的主键，而 url  字段设置为索引，设置索引可以加快查询的速度。
+我们先在数据库中添加两条测试数据，如下图所示：</p>
+<p><img src="https://zgjoget9.github.io/img/url_3.png" alt="pic3"></p>
+<p>我们使用 SQL 语句查询，如下图所示：</p>
+<p><img src="https://zgjpget9.github.io/img/url_4.png" alt="pic4"></p>
+<p>如果结果大于 0 则表明已经有重复的 URL 了，否则表示没有重复的 URL。</p>
+<ul>
+<li>4.唯一索引去重
+我们也可以使用数据库的唯一索引来防止 URL 重复，它的实现思路和前面 Set 集合的思想思路非常像。
+首先我们先为字段 URL 设置了唯一索引，然后再添加 URL 数据，如果能添加成功则表明 URL 不重复，反之则表示重复。
+创建唯一索引的 SQL 实现如下：</li>
+</ul>
+<pre tabindex="0"><code>create unique index Index_url on urlinfo
+(
+   url
+);
+</code></pre><ul>
+<li>5.Guava 布隆过滤器去重</li>
+</ul>
+<p>布隆过滤器（Bloom Filter）是1970年由布隆提出的。它实际上是一个很长的二进制向量和一系列随机映射函数。布隆过滤器可以用于检索一个元素是否在一个集合中。它的优点是空间效率和查询时间都远远超过一般的算法，缺点是有一定的误识别率和删除困难。
+布隆过滤器的核心实现是一个超大的位数组和几个哈希函数，假设位数组的长度为 m，哈希函数的个数为 k。</p>
+<p><img src="https://zgjoget9.github.io/img/url_5.png" alt="pic5"></p>
+<p>以上图为例，具体的操作流程：假设集合里面有 3 个元素 {x, y, z}，哈希函数的个数为 3。首先将位数组进行初始化，将里面每个位都设置位 0。对于集合里面的每一个元素，将元素依次通过 3 个哈希函数进行映射，每次映射都会产生一个哈希值，这个值对应位数组上面的一个点，然后将位数组对应的位置标记为 1，查询 W 元素是否存在集合中的时候，同样的方法将 W 通过哈希映射到位数组上的 3 个点。如果 3 个点的其中有一个点不为 1，则可以判断该元素一定不存在集合中。反之，如果 3 个点都为 1，则该元素可能存在集合中。注意：此处不能判断该元素是否一定存在集合中，可能存在一定的误判率。可以从图中可以看到：假设某个元素通过映射对应下标为 4、5、6 这 3 个点。虽然这 3 个点都为 1，但是很明显这 3 个点是不同元素经过哈希得到的位置，因此这种情况说明元素虽然不在集合中，也可能对应的都是 1，这是误判率存在的原因。
+我们可以借助 Google 提供的 Guava 框架来操作布隆过滤器，实现我们先在 pom.xml 中添加 Guava 的引用，配置如下：</p>
+<pre tabindex="0"><code>&lt;!-- 添加 Guava 框架 --&gt;
+&lt;!-- https://mvnrepository.com/artifact/com.google.guava/guava --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.google.guava&lt;/groupId&gt;
+    &lt;artifactId&gt;guava&lt;/artifactId&gt;
+    &lt;version&gt;28.2-jre&lt;/version&gt;
+&lt;/dependency&gt;
+URL 判重的实现代码：
+public class URLRepeat {
+    // 待去重 URL
+    public static final String[] URLS = {
+            &quot;www.apigo.cn&quot;,
+            &quot;www.baidu.com&quot;,
+            &quot;www.apigo.cn&quot;
+    };
+
+    public static void main(String[] args) {
+        // 创建一个布隆过滤器
+        BloomFilter&lt;String&gt; filter = BloomFilter.create(
+                Funnels.stringFunnel(Charset.defaultCharset()),
+                10, // 期望处理的元素数量
+                0.01); // 期望的误报概率
+        for (int i = 0; i &lt; URLS.length; i++) {
+            String url = URLS[i];
+            if (filter.mightContain(url)) {
+                // 用重复的 URL
+                System.out.println(&quot;URL 已存在了：&quot; + url);
+            } else {
+                // 将 URL 存储在布隆过滤器中
+                filter.put(url);
+            }
+        }
+    }
+}
+</code></pre><p>以上程序的执行结果为：</p>
+<blockquote>
+<p>URL 已存在了：www.apigo.cn</p>
+</blockquote>
+<ul>
+<li>6.Redis 布隆过滤器去重</li>
+</ul>
+<p>除了 Guava 的布隆过滤器，我们还可以使用 Redis 的布隆过滤器来实现 URL 判重。在使用之前，我们先要确保 Redis 服务器版本大于 4.0（此版本以上才支持布隆过滤器），并且开启了 Redis 布隆过滤器功能才能正常使用。
+以 Docker 为例，我们来演示一下 Redis 布隆过滤器安装和开启，首先下载 Redis 的布隆过器，然后再在重启 Redis 服务时开启布隆过滤器。</p>
+<p><img src="https://zgjoget9.github.io/img/url_6.png" alt="pic6"></p>
+<p>布隆过滤器使用布隆过滤器正常开启之后，我们先用 Redis 的客户端 redis-cli 来实现一下布隆过滤器 URL 判重了，实现命令如下：</p>
+<p><img src="https://zgjoget9.github.io/img/url_7.png" alt="pic7"></p>
+<p>在 Redis 中，布隆过滤器的操作命令不多，主要包含以下几个：
+bf.add 添加元素；
+bf.exists 判断某个元素是否存在；
+bf.madd 添加多个元素；
+bf.mexists 判断多个元素是否存在；
+bf.reserve 设置布隆过滤器的准确率。
+接下来我们使用代码来演示一下 Redis 布隆过滤器的使用：</p>
+<pre tabindex="0"><code>import redis.clients.jedis.Jedis;
+import utils.JedisUtils;
+
+import java.util.Arrays;
+
+public class BloomExample {
+    // 布隆过滤器 key
+    private static final String _KEY = &quot;URLREPEAT_KEY&quot;;
+    
+    // 待去重 URL
+    public static final String[] URLS = {
+            &quot;www.apigo.cn&quot;,
+            &quot;www.baidu.com&quot;,
+            &quot;www.apigo.cn&quot;
+    };
+
+    public static void main(String[] args) {
+        Jedis jedis = JedisUtils.getJedis();
+         for (int i = 0; i &lt; URLS.length; i++) {
+            String url = URLS[i];
+            boolean exists = bfExists(jedis, _KEY, url);
+            if (exists) {
+                // 重复的 URL
+                System.out.println(&quot;URL 已存在了：&quot; + url);
+            } else {
+                bfAdd(jedis, _KEY, url);
+            }
+        }
+    }
+
+    /**
+     * 添加元素
+     * @param jedis Redis 客户端
+     * @param key   key
+     * @param value value
+     * @return boolean
+     */
+    public static boolean bfAdd(Jedis jedis, String key, String value) {
+        String luaStr = &quot;return redis.call('bf.add', KEYS[1], KEYS[2])&quot;;
+        Object result = jedis.eval(luaStr, Arrays.asList(key, value),
+                Arrays.asList());
+        if (result.equals(1L)) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * 查询元素是否存在
+     * @param jedis Redis 客户端
+     * @param key   key
+     * @param value value
+     * @return boolean
+     */
+    public static boolean bfExists(Jedis jedis, String key, String value) {
+        String luaStr = &quot;return redis.call('bf.exists', KEYS[1], KEYS[2])&quot;;
+        Object result = jedis.eval(luaStr, Arrays.asList(key, value),
+                Arrays.asList());
+        if (result.equals(1L)) {
+            return true;
+        }
+        return false;
+    }
+}
+</code></pre>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/8th_feb_algorithm_training/" data-tooltip="8th_Feb_algorithm_training" aria-label="NEXT: 8th_Feb_algorithm_training">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/record_first_double_week_contest/" data-tooltip="Record_first_double_week_contest" aria-label="PREVIOUS: Record_first_double_week_contest">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/02/url_filter/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/02/url_filter/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/02/url_filter/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/02\/url_filter\/';
+        
+          this.page.identifier = '\/2022\/02\/url_filter\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'zgjoget9-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Zhang Gaojie. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/8th_feb_algorithm_training/" data-tooltip="8th_Feb_algorithm_training" aria-label="NEXT: 8th_Feb_algorithm_training">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/record_first_double_week_contest/" data-tooltip="Record_first_double_week_contest" aria-label="PREVIOUS: Record_first_double_week_contest">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/02/url_filter/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/02/url_filter/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/02/url_filter/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Furl_filter%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Furl_filter%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Furl_filter%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Zhang Gaojie</h4>
+    
+      <div id="about-card-bio">A Computer-science and Cyber-security novice</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Huazhong University of Science and Technology
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Wuhan, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zgjoget9.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://zgjoget9.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

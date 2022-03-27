@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>slide window on Zhang Gaojie</title>
+    <link>https://zgjoget9.github.io/categories/slide-window/</link>
+    <description>Recent content in slide window on Zhang Gaojie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Feb 2022 00:51:58 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/categories/slide-window/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Count_Number_of_Nice_Subarrays</title>
+      <link>https://zgjoget9.github.io/2022/02/count_number_of_nice_subarrays/</link>
+      <pubDate>Sat, 05 Feb 2022 00:51:58 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/count_number_of_nice_subarrays/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Given an array of integers nums and an integer k.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

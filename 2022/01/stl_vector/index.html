@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "stl_vector",
+  
+  "datePublished": "2022-01-11T16:27:47+08:00",
+  "dateModified": "2022-01-11T16:27:47+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Zhang Gaojie",
+    
+    "image": "https://zgjoget9.github.io/img/avatar.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/01\/stl_vector\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zhang Gaojie",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zgjoget9.github.io/img/avatar.jpg"
+    }
+    
+  },
+  "description": "record stl learning\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Zhang Gaojie">
+<meta name="keywords" content="">
+<meta name="description" content="record stl learning">
+
+
+<meta property="og:description" content="record stl learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="stl_vector">
+<meta name="twitter:title" content="stl_vector">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/01/stl_vector/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/01/stl_vector/">
+<meta property="og:site_name" content="Zhang Gaojie">
+<meta property="og:description" content="record stl learning">
+<meta name="twitter:description" content="record stl learning">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-01-11T16:27:47">
+  
+  
+    <meta property="article:modified_time" content="2022-01-11T16:27:47">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://zgjoget9.github.io/img/avatar.jpg">
+  <meta property="twitter:image" content="https://zgjoget9.github.io/img/avatar.jpg">
+
+
+
+
+
+
+    <title>stl_vector</title>
+
+    <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/01/stl_vector/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://zgjoget9.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://zgjoget9.github.io/" aria-label="Go to homepage">Zhang Gaojie</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://zgjoget9.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://zgjoget9.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Zhang Gaojie</h4>
+        
+          <h5 class="sidebar-profile-bio">A Computer-science and Cyber-security novice</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/zgjoget9" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/18013715/jack-zhang" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      stl_vector
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-01-11T16:27:47&#43;08:00">
+        
+  January 11, 2022
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>record stl learning</p>
+<ul>
+<li>
+<p>assign()</p>
+<p>void assign (InputIterator first, InputIterator last);</p>
+<p>//将迭代器范围内的值为vector初始化</p>
+<p>void assign (size_type n, const value_type&amp; val);</p>
+<p>//填充n个val</p>
+<p>void assign (initializer_list&lt;value_type&gt; il);</p>
+<p>//初始化list??</p>
+</li>
+<li>
+<p>at()</p>
+<p>会自动检查越界的访问元素，区别于下标访问。</p>
+<pre tabindex="0"><code>myvector.at(i) 
+</code></pre></li>
+<li>
+<p>capacity()</p>
+<p>当前容器容量，不等于size()</p>
+</li>
+<li>
+<p>cbegin()</p>
+<p>返回const_iterator，只读不写</p>
+</li>
+<li>
+<p>cend()
+同上</p>
+</li>
+<li>
+<p>crbegin()</p>
+<p>const_reverse_iterator</p>
+</li>
+<li>
+<p>crend()</p>
+<p>同上</p>
+</li>
+<li>
+<p>data()</p>
+<p>int* p = myvector.data();则p指向myvector的第一个元素指针</p>
+</li>
+<li>
+<p>emplace(position)</p>
+<p>插入节点</p>
+<pre tabindex="0"><code>// vector::emplace
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main ()
+{
+std::vector&lt;int&gt; myvector = {10,20,30};
+
+auto it = myvector.emplace ( myvector.begin()+1, 100 );
+myvector.emplace ( it, 200 );
+myvector.emplace ( myvector.end(), 300 );
+
+std::cout &lt;&lt; &quot;myvector contains:&quot;;
+for (auto&amp; x: myvector)
+    std::cout &lt;&lt; ' ' &lt;&lt; x;
+std::cout &lt;&lt; '\n';
+
+return 0;
+}
+</code></pre><pre tabindex="0"><code>Output: myvector contains: 10 200 100 20 30 300
+</code></pre></li>
+<li>
+<p>emplace_back()</p>
+<p>功能同push_back()，但是效率比push_back()高。</p>
+</li>
+<li>
+<p>get_allocator()</p>
+</li>
+<li>
+<p>insert()</p>
+<p>iterator insert (const_iterator position, const value_type&amp; val);//single val</p>
+<p>iterator insert (const_iterator position, size_type n, const value_type&amp; val);</p>
+<p>template <!-- raw HTML omitted -->
+iterator insert (const_iterator position, InputIterator first, InputIterator last);</p>
+<p>iterator insert (const_iterator position, value_type&amp;&amp; val);</p>
+<p>iterator insert (const_iterator position, initializer_list&lt;value_type&gt; il);</p>
+<pre tabindex="0"><code>// inserting into a vector
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main ()
+{
+std::vector&lt;int&gt; myvector (3,100);
+std::vector&lt;int&gt;::iterator it;
+
+it = myvector.begin();
+it = myvector.insert ( it , 200 );
+
+myvector.insert (it,2,300);
+
+// &quot;it&quot; no longer valid, get a new one:
+it = myvector.begin();
+
+std::vector&lt;int&gt; anothervector (2,400);
+myvector.insert (it+2,anothervector.begin(),anothervector.end());
+
+int myarray [] = { 501,502,503 };
+myvector.insert (myvector.begin(), myarray, myarray+3);
+
+std::cout &lt;&lt; &quot;myvector contains:&quot;;
+for (it=myvector.begin(); it&lt;myvector.end(); it++)
+    std::cout &lt;&lt; ' ' &lt;&lt; *it;
+std::cout &lt;&lt; '\n';
+
+return 0;
+}
+</code></pre><pre tabindex="0"><code>myvector contains: 501 502 503 300 300 400 400 200 100 100 100
+</code></pre></li>
+<li>
+<p>operator=</p>
+<pre tabindex="0"><code>// vector assignment
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main ()
+{
+std::vector&lt;int&gt; foo (3,0);
+std::vector&lt;int&gt; bar (5,0);
+
+bar = foo;
+foo = std::vector&lt;int&gt;();
+
+std::cout &lt;&lt; &quot;Size of foo: &quot; &lt;&lt; int(foo.size()) &lt;&lt; '\n';
+std::cout &lt;&lt; &quot;Size of bar: &quot; &lt;&lt; int(bar.size()) &lt;&lt; '\n';
+return 0;
+}
+</code></pre><pre tabindex="0"><code>Size of foo: 0
+Size of bar: 3
+</code></pre></li>
+<li>
+<p>operator[]</p>
+</li>
+<li>
+<p>rbegin()
+reverse_iterator</p>
+<p>非const可修改</p>
+</li>
+<li>
+<p>rend()</p>
+</li>
+<li>
+<p>reserve()</p>
+<p>预定n个空间，且容器满后再push_back没有效果，仍然是容器满的状态。</p>
+</li>
+<li>
+<p>resize()</p>
+<p>resize(n)//调整大小为n，保留n个空间，如果原大小大于n则从vector[n]到vector.back()的元素全被抛弃。反之则扩充至n个空间，且初始化值为0。
+resize(m,val)//调整大小为m，如果m&gt;原大小，则扩充部分值为val。</p>
+</li>
+<li>
+<p>shrink_to_fit</p>
+<p>缩小容器的容量到适合</p>
+<pre tabindex="0"><code>// vector::shrink_to_fit
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main ()
+{
+std::vector&lt;int&gt; myvector (100);
+std::cout &lt;&lt; &quot;1. capacity of myvector: &quot; &lt;&lt; myvector.capacity() &lt;&lt; '\n';
+
+myvector.resize(10);
+std::cout &lt;&lt; &quot;2. capacity of myvector: &quot; &lt;&lt; myvector.capacity() &lt;&lt; '\n';
+
+myvector.shrink_to_fit();
+std::cout &lt;&lt; &quot;3. capacity of myvector: &quot; &lt;&lt; myvector.capacity() &lt;&lt; '\n';
+
+return 0;
+}
+</code></pre><pre tabindex="0"><code>1. myvector的容量：100
+2. myvector的容量：100
+3. myvector的容量：10
+</code></pre></li>
+<li>
+<p>size()</p>
+<p>获取当前容器大小</p>
+</li>
+<li>
+<p>swap()</p>
+<p>交换两个容器的内容，包括空间大小和值</p>
+</li>
+</ul>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/stl_map-stl_set/" data-tooltip="stl_map &amp; stl_set" aria-label="NEXT: stl_map &amp; stl_set">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/" data-tooltip="Why_i_choose_hugo_instead_of_hexo" aria-label="PREVIOUS: Why_i_choose_hugo_instead_of_hexo">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/stl_vector/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/stl_vector/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/stl_vector/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/01\/stl_vector\/';
+        
+          this.page.identifier = '\/2022\/01\/stl_vector\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'zgjoget9-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Zhang Gaojie. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/stl_map-stl_set/" data-tooltip="stl_map &amp; stl_set" aria-label="NEXT: stl_map &amp; stl_set">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/" data-tooltip="Why_i_choose_hugo_instead_of_hexo" aria-label="PREVIOUS: Why_i_choose_hugo_instead_of_hexo">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/stl_vector/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/stl_vector/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/stl_vector/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Fstl_vector%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Fstl_vector%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Fstl_vector%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Zhang Gaojie</h4>
+    
+      <div id="about-card-bio">A Computer-science and Cyber-security novice</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Huazhong University of Science and Technology
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Wuhan, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zgjoget9.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://zgjoget9.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

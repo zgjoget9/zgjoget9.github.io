@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Object Oriented Programming",
+  
+  "datePublished": "2022-03-15T10:26:58+08:00",
+  "dateModified": "2022-03-15T10:26:58+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Zhang Gaojie",
+    
+    "image": "https://zgjoget9.github.io/img/avatar.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/object-oriented-programming\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zhang Gaojie",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://zgjoget9.github.io/img/avatar.jpg"
+    }
+    
+  },
+  "description": "cpp of cpp\n",
+  "keywords": []
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Zhang Gaojie">
+<meta name="keywords" content="">
+<meta name="description" content="cpp of cpp">
+
+
+<meta property="og:description" content="cpp of cpp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object Oriented Programming">
+<meta name="twitter:title" content="Object Oriented Programming">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/03/object-oriented-programming/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/object-oriented-programming/">
+<meta property="og:site_name" content="Zhang Gaojie">
+<meta property="og:description" content="cpp of cpp">
+<meta name="twitter:description" content="cpp of cpp">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-03-15T10:26:58">
+  
+  
+    <meta property="article:modified_time" content="2022-03-15T10:26:58">
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://zgjoget9.github.io/img/avatar.jpg">
+  <meta property="twitter:image" content="https://zgjoget9.github.io/img/avatar.jpg">
+
+
+
+
+
+
+    <title>Object Oriented Programming</title>
+
+    <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/object-oriented-programming/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://zgjoget9.github.io/css/style-h6ccsoet3mzkbb0wngshlfbaweimexgqcxj0h5hu4h82olsdzz6wmqdkajm.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://zgjoget9.github.io/" aria-label="Go to homepage">Zhang Gaojie</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://zgjoget9.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://zgjoget9.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Zhang Gaojie</h4>
+        
+          <h5 class="sidebar-profile-bio">A Computer-science and Cyber-security novice</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zgjoget9.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/zgjoget9" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/18013715/jack-zhang" target="_blank" rel="noopener" title="Stack Overflow">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-stack-overflow" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      Object Oriented Programming
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-03-15T10:26:58&#43;08:00">
+        
+  March 15, 2022
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>cpp of cpp</p>
+<p>大概花了一周的时间把cpp的内容大致总结了一下</p>
+<h2 id="c-in-cpp">c in cpp</h2>
+<h3 id="ccpp是强类型定义语言但是不是类型安全的">c/cpp是强类型定义语言，但是不是类型安全的</h3>
+<h3 id="const--volatile">const &amp; volatile</h3>
+<ul>
+<li>
+<p>const
+用于修饰变量或者指针，表示不可变。</p>
+<p>修饰指针时如下两种情况</p>
+<ul>
+<li>
+<p>const int *p
+表示p指向的内容是常量。</p>
+<p>不能用p变量修改常量值.</p>
+<p>如：*p=4;</p>
+<p>p[1]=2;</p>
+</li>
+<li>
+<p>int * const p
+表示修饰指针本身不可变,p指向的内容可以修改,但是p值不能修改。</p>
+<p>如p=&amp;n是错误的。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>vollatile
+每次访问将从地址中读取，告诉编译器不要优化。</p>
+</li>
+</ul>
+<h3 id="cpp显式类型转换">cpp显式类型转换</h3>
+<ul>
+<li>静态转换(static_cast)
+用于明确定义的转换</li>
+<li>常量转换(const_cast)
+从const转换为非const或者volatile转换为非volatile</li>
+<li>重解释转换(reinterpret_cast)
+最不安全的转换机制，是低级的位操作</li>
+<li>动态转换(dynamic_cast)
+用于类继承结构中实现类型安全的对象指针向下转换</li>
+</ul>
+<h3 id="内存管理">内存管理</h3>
+<p>malloc / free</p>
+<p>标准库函数，不受到编译器的控制，不能执行构造函数和析构函数</p>
+<p>new / delete</p>
+<p>new[] / delete[]</p>
+<p>运算符operator</p>
+<h3 id="cpp函数设计">cpp函数设计</h3>
+<ul>
+<li>函数参数传递
+c:传值、传地址</li>
+</ul>
+<p>cpp:传引用</p>
+<p>引用必须初始化、仅在定义时带有&amp;，之后就和普通变量一样。</p>
+<p>在采用引用参数时不必为形参创建副本，从而节省空间</p>
+<p>引用和指针的区别：</p>
+<p>指针指向一个对象之后对他指向的变量进行间接操作。</p>
+<p>引用只是目标变量的别名</p>
+<p>引用作为函数参数时，引用传递方式是将形参定义成对应的实参的引用，即形参作为对应实参的别名
+1、引用必须初始化，但是不分配存储空间。指针在定义时不一定初始化，定义指针需要分配存储空间。</p>
+<p>2、引用初始化之后不能被改变，指针可以改变</p>
+<p>3、不存在指向空值的引用，但存在指向空值的指针</p>
+<ul>
+<li>返回引用的函数</li>
+</ul>
+<p>不能返回局部变量的引用</p>
+<p>不要返回函数内用malloc/new分配的内存引用</p>
+<ul>
+<li>函数重载</li>
+<li>函数默认参数值
+注意的是默认参数放在参数表的最后</li>
+<li>extern &ldquo;C&rdquo;
+这是链接指示符，作用是能够正确实现c++代码调用其他c语言代码。</li>
+</ul>
+<p>加上extern &ldquo;C&quot;会指示编译器将这份代码按c语言编译，仅在cpp中使用</p>
+<h3 id="断言assert">断言assert</h3>
+<p>调试程序时使用的宏，计算他括号内的表达式</p>
+<p>如果表达式为假，程序报告错误，终止执行。通常用来判断是否出现非法数据</p>
+<h2 id="类和对象">类和对象</h2>
+<h3 id="类的定义">类的定义</h3>
+<ul>
+<li>类成员访问权限
+private声明私有成员，私有数据成员只允许在类内访问，私有函数只允许被类内的其他成员函数调用</li>
+</ul>
+<p>public声明公有成员，如上  允许、允许</p>
+<p>protected声明保护成员。如上  允许类内或者子类访问</p>
+<p>访问权限的好处：信息隐蔽，实现封装/数据保护，防止被修改。</p>
+<p>默认情况下是private</p>
+<p>可以以任意的顺序进行声明公私有成员</p>
+<ul>
+<li>内联函数
+内联函数：类的声明体中实现的函数，类的声明体外使用inline表示的函数。</li>
+</ul>
+<p>编译器遇到调用内敛函数的地方会用函数体的代码代替函数的调用，好处是节省函数调用带来的参数传递、栈空间的开销，从而提高执行速度，代价是增加了代码的长度</p>
+<p>内联函数注意事项：
+1、使用inline关键字的函数不一定会被编译器调用时展开，inline对编译器只是建议作用。</p>
+<p>2、通常只讲较短的函数设计为内联函数。</p>
+<p>3、内联函数不允许有循环和开关语句，如果有则视为普通函数</p>
+<p>4、递归函数不能用作内联函数，因为无法在调用点完全展开(虽然第一次可以)</p>
+<p>5、定义必须出现在第一次调用之前</p>
+<p>内联函数和宏定义</p>
+<p>二者可以达到同样的目的，但是区别如下：</p>
+<p>1、内联函数在执行时可以调试，而宏定义不可以</p>
+<p>2、编译器会对内联函数参数做安全检查或者自动类型转换</p>
+<p>3、内联函数可以访问类的成员变量</p>
+<p>4、类中声明同时定义的成员函数自动转换为内联函数</p>
+<ul>
+<li>构造函数
+构造函数是特殊的成员函数，主要用于对成员进行初始化</li>
+</ul>
+<p>构造函数名称和类名相同</p>
+<p>尽管是成员函数，但是没有类型</p>
+<p>可以重载</p>
+<p>定义类对象时会自动调用构造函数</p>
+<ul>
+<li>拷贝构造函数</li>
+</ul>
+<p>类名::拷贝构造函数(const 类名 &amp;引用名)</p>
+<pre tabindex="0"><code>class A{
+    A(const A &amp; obj){
+
+    }
+}
+</code></pre><p>具有一般构造函数的所有特性，主要用于通过一个已经存在的类对象创建一个新的类对象是实现对象之间数据成员的复制操作。</p>
+<ul>
+<li>析构函数
+和构造函数一样也是特殊的成员函数。析构函数有如下性质：</li>
+</ul>
+<p>1、在类对象销毁时自动执行，用于内存清理</p>
+<p>2、一个类只能有一个析构函数，且析构函数没有参数</p>
+<p>3、析构函数名称为类名前加'~'</p>
+<p>4、也没有函数类型</p>
+<p>5、没有定义析构函数时，编译器会自动生成一个默认析构函数</p>
+<ul>
+<li>类对象</li>
+</ul>
+<p>类对象的存储方式：</p>
+<p>每个对象单独存储，按照非静态数据成员定义的先后顺序依次存放，成员函数放在代码区，所有对象共享，不占对象的内存空间。调用时用对应成员函数的地址代替。</p>
+<p>类对象的大小：所有非静态成员的类型大小之和，普通成员函数与sizeof()无关。</p>
+<p>有虚函数时要有一个虚函数表指针，另外存在虚继承时还需要指向虚基类的指针，每个指针占用一个地址大小的内存空间(4个字节)</p>
+<ul>
+<li>空类</li>
+</ul>
+<blockquote>
+<p>为什么sizeof(空类)=1?
+实例化的原因,每个实例应该有唯一的地址,为了达到这样的目的，编译器会给空类插入一个字节，使空类在实例化后在内存中得到的唯一地址
+空类所占内存为1字节</p>
+</blockquote>
+<ul>
+<li>类与结构体的区别
+实际上类是从结构体演化过来的，但是对结构体进行了扩展。</li>
+</ul>
+<p>默认成员 结构体是公有的，类是私有的</p>
+<h3 id="静态成员和静态对象">静态成员和静态对象</h3>
+<p>提出静态数据成员目的是解决数据共享的问题</p>
+<p>和成员函数一样放在类公共区，所以有时称静态数据成员为类变量</p>
+<p>特征：</p>
+<p>1、定义一般数据前加static</p>
+<p>2、不属于任何一个具体对象，所以必须对它初始化，不能在类中初始化。</p>
+<p>3、初始化格式：类名::静态数据成员 = 值</p>
+<p>4、在类外引用静态成员数据格式 类名::静态数据成员</p>
+<p>5、private 也可以进行初始化，但是不能在类外访问</p>
+<ul>
+<li>静态成员函数</li>
+</ul>
+<p>静态数据成员和静态成员函数可由任意访问权限许可的成员函数访问</p>
+<p>静态成员函数只能访问静态数据成员，不能直接访问类中的非静态数据成员。非静态数据成员只有对象存在时才有意义。</p>
+<ul>
+<li>静态对象</li>
+</ul>
+<p>生存期是整个程序，作用域是所在的函数</p>
+<h3 id="对象指针">对象指针</h3>
+<p>使用指针(即new)创建的对象需要用delete销毁，否则不会自动销毁</p>
+<h3 id="对象数组">对象数组</h3>
+<p>A a[n]可以使用重载的构造函数</p>
+<p>A *p=new A[n]只能使用默认的构造函数</p>
+<h3 id="this指针">this指针</h3>
+<p>this指针是隐含于每个类对象的特殊指针，指针值是一个正在被某个成员函数操作的对象的地址</p>
+<p>this指针是c++实现封装的一种机制，它将对象和该对象调用的成员函数连接在一起</p>
+<h3 id="对象之间的复制">对象之间的复制</h3>
+<p>如果已创建，运算符=</p>
+<p>如果创建新对象，拷贝构造函数</p>
+<ul>
+<li>对象之间的浅复制和深复制</li>
+</ul>
+<p>浅复制：复制完成之后他们还共享一些资源，其中一个对象销毁会影响另一个对象</p>
+<p>深复制：复制完成后不会共享任何资源，互不影响</p>
+<h3 id="常对象和常对象成员">常对象和常对象成员</h3>
+<ul>
+<li>常对象</li>
+</ul>
+<p>指对象常量，一般格式为：
+类名 const 对象名</p>
+<p>const 类名 对象名</p>
+<p>定义常对象时必须初始化，常变量的数据成员不能被更新</p>
+<p>不能调用常对象的非const成员函数，否则会报错。</p>
+<ul>
+<li>常对象成员</li>
+</ul>
+<p>常对象成员包括常数据成员和常成员函数</p>
+<p>常数据成员可以是常量和常引用，只能通过构造函数初始化</p>
+<ul>
+<li>mutable</li>
+</ul>
+<p>如果希望常对象修改某些数据成员值，只需要将其定义为mutable</p>
+<h3 id="c中的explicit">c++中的explicit</h3>
+<p>表明构造函数是显式的，不允许隐式转换，表示只能显式调用该构造函数</p>
+<h3 id="子对象">子对象</h3>
+<p>当一个类的数据成员是另一个类的对象时，这个对象称为子对象。</p>
+<ul>
+<li>构造函数和析构函数的执行次序
+子对象能够正常执行，但是要考虑构造函数和析构函数的执行次序</li>
+</ul>
+<pre tabindex="0"><code>class A{
+
+}
+class B{
+    A one;
+}
+A构造
+B构造
+B析构
+A析构
+</code></pre><ul>
+<li>
+<p>静态子对象</p>
+</li>
+<li>
+<p>前向引用声明</p>
+</li>
+</ul>
+<h3 id="嵌套类和局部类">嵌套类和局部类</h3>
+<ul>
+<li>
+<p>嵌套类</p>
+</li>
+<li>
+<p>局部类</p>
+</li>
+</ul>
+<h2 id="友元和运算符重载">友元和运算符重载</h2>
+<h3 id="友元函数">友元函数</h3>
+<ul>
+<li>友元函数概述</li>
+</ul>
+<p>friend 函数类型 友元函数名(参数表)</p>
+<p>指虽然不是类成员函数却能够通过类对象访问其所有成员函数。类授予他的友元特别的访问权</p>
+<p>特点：</p>
+<p>1、不是类的成员函数，但需要在类中声明</p>
+<p>2、友元函数不能直接访问类的成员，只能通过类的对象访问其所有成员，包括私有和保护的成员</p>
+<p>3、不是类的成员函数，没有this指针</p>
+<p>4、友元函数的调用方式和普通函数调用方式相同，不需要通过对象调用</p>
+<p>5、友元函数可以作为另一个类的成员函数，这种情况下他既有友元函数的特点，又有成员函数的特点</p>
+<p>6、友元函数通过对象访问其所有成员，破坏了数据的安全性，所以使用友元函数必须非常谨慎，不要通过友元函数对数据成员进行危险操作。</p>
+<p>定义友元函数的说明：</p>
+<p>1、本质上友元函数是全局的，声明位置可以放在类的任何地方，放在public、private、protected意义完全一样。</p>
+<p>2、原则上讲友元函数在类里声明，在类外实现。在类内实现的友元函数在调用时必须具有该类类型的实参</p>
+<ul>
+<li>操作多个对象数据成员的友元函数</li>
+</ul>
+<p>一个函数需要操作多个类对象的非公有成员，可以将其设计成这些类的友元函数，并在这些类中分别声明。</p>
+<p>1、将这个函数声明声明为所有类的友元函数。</p>
+<p>2、函数声明为一个类的成员函数、其他一个或者多个类的友元函数</p>
+<p>如果一个类的成员函数是另一个类的友元函数，则成这个成员函数为友元成员。通过友元成员不仅能访问自己所在的类对象中的所有其他成员，还可以访问有关键字friend声明语句所在类的对象中的所有成员。</p>
+<p>注意：如果存在友元成员，必须先定义成员函数所在类，声明友元函数时要加上成员函数所在类的类名和作用域运算符。</p>
+<h3 id="友元类">友元类</h3>
+<p>可以将一个类声明为另一个类的友元类。若B是A的友元类，则B的所有成员函数都是A的友元函数。</p>
+<pre tabindex="0"><code>class A{
+    friend class B;
+}
+</code></pre><h3 id="运算符重载">运算符重载</h3>
+<ul>
+<li>概念
+运算符重载是用同一个运算符完成不同的运算功能，和函数重载一样，在编译阶段完成，体现的是静态的多态性。</li>
+</ul>
+<p>C++运算符重载的相关规定如下：</p>
+<p>1、不能改变原运算符的优先级</p>
+<p>2、不能改变原运算符的结合性</p>
+<p>3、默认参数不能和运算符重载一起使用，也就是说在设计运算符重载函数时不能使用默认参数</p>
+<p>4、不能改变运算符的操作数数量</p>
+<p>5、不能创建新的运算符，只能在现有运算符上重载</p>
+<p>6、运算符作为c++内部提供的数据类型时，原来含义不变</p>
+<p>7、运算符可以被重载用于用户定义的类对象或者用户定义的类对象与内置数据类型变量的组合</p>
+<p>不能重载的运算符：</p>
+<p><img src="https://zgjoget9.github.io/img/cpp_cant_reload_operator.jpg" alt="pic1"></p>
+<ul>
+<li>运算符重载函数的定义格式</li>
+</ul>
+<p>格式1：运算符重载函数作为类成员函数</p>
+<pre tabindex="0"><code>函数类型 operator 重载运算符(形参表){
+
+}
+</code></pre><p>格式2、运算符重载函数作为类的友元函数</p>
+<pre tabindex="0"><code>friend 函数类型 operator 重载运算符(形参表){
+
+}
+</code></pre><ul>
+<li>运算符重载函数的调用格式</li>
+</ul>
+<blockquote>
+<p>左运算对象 双目运算符 右运算对象</p>
+</blockquote>
+<ul>
+<li>总结</li>
+</ul>
+<p>1、运算符重载的意义</p>
+<pre><code>使用户自定义数据类型的数据和操作与内定义的数据类型的操作形式一致。
+</code></pre>
+<p>2、 运算符重载的3种方式</p>
+<pre><code>普通函数、友元函数、类成员函数
+</code></pre>
+<ul>
+<li>设计</li>
+</ul>
+<h3 id="两个类对象之间的转换">两个类对象之间的转换</h3>
+<ul>
+<li>通过构造函数转换</li>
+</ul>
+<p>类似于拷贝构造函数，但是拷贝构造函数主要用于相同类对象数据成员赋值。</p>
+<ul>
+<li>
+<p>通过重载类型转换运算符()进行转换</p>
+</li>
+<li>
+<p>通过类指针实现强制转换</p>
+</li>
+</ul>
+<h2 id="模板和异常处理">模板和异常处理</h2>
+<h3 id="函数模板">函数模板</h3>
+<ul>
+<li>
+<p>定义</p>
+</li>
+<li>
+<p>实例化函数模板</p>
+</li>
+<li>
+<p>重载模板函数</p>
+</li>
+<li>
+<p>函数调用的匹配顺序</p>
+</li>
+</ul>
+<h3 id="类模板">类模板</h3>
+<ul>
+<li>
+<p>定义</p>
+</li>
+<li>
+<p>实例化</p>
+</li>
+<li>
+<p>类模板作为函数参数</p>
+</li>
+<li>
+<p>类模板的友元函数</p>
+</li>
+<li>
+<p>模板与静态成员</p>
+</li>
+<li>
+<p>类模板与非类型参数</p>
+</li>
+</ul>
+<h3 id="异常处理">异常处理</h3>
+<ul>
+<li>
+<p>异常处理的语法</p>
+</li>
+<li>
+<p>带有异常声明的函数原型</p>
+</li>
+<li>
+<p>异常处理中对象的构造和析构</p>
+</li>
+</ul>
+<h2 id="继承和派生">继承和派生</h2>
+<h3 id="继承和派生基础">继承和派生基础</h3>
+<ul>
+<li>
+<p>派生类的定义格式</p>
+</li>
+<li>
+<p>派生类对象的内存结构</p>
+</li>
+<li>
+<p>派生类的构造函数</p>
+</li>
+<li>
+<p>派生类的拷贝构造函数</p>
+</li>
+<li>
+<p>派生类的析构函数</p>
+</li>
+<li>
+<p>类层次的类模板</p>
+</li>
+</ul>
+<h3 id="积累对象和派生类对象的使用关系">积累对象和派生类对象的使用关系</h3>
+<ul>
+<li>
+<p>派生类对象能作为基类对象处理</p>
+</li>
+<li>
+<p>基类指针指向派生类对象</p>
+</li>
+<li>
+<p>派生类指针强制之乡基类对象</p>
+</li>
+</ul>
+<h3 id="虚继承">虚继承</h3>
+<p>在复杂的类继承中可能存在重复继承的问题，解决办法：</p>
+<p>1、使用作用域分辨</p>
+<p>2、将多次重复继承的基类设置为虚基类</p>
+<ul>
+<li>虚基类的声明</li>
+</ul>
+<p>虚基类是在继承基类的方式前加上virtual</p>
+<p>virtual 继承方式 类名</p>
+<ul>
+<li>
+<p>虚继承中的派生类对象的内存结构</p>
+<ul>
+<li>虚基类表vbtable：</li>
+</ul>
+<p>一般只有一个vbtable</p>
+<p>存放派生类的所有虚基类，表中每一项都是4个字节</p>
+<p>表项：</p>
+<p>1、派生类对象本身和虚基类指针的偏移</p>
+<p>2、第一个虚基类和虚基类表指针的偏移</p>
+<p>3、&hellip;&hellip;&hellip;</p>
+<p>&hellip;..</p>
+<ul>
+<li>虚基类指针vbptr</li>
+</ul>
+<p>派生类对象中最开头存放虚基类表指针，然后存放对象的数据成员，最后存放虚基类的数据成员。</p>
+<p>在多虚继承时按照继承方式列表顺序存放各个虚基类成员。</p>
+</li>
+<li>
+<p>虚继承中派生类构造函数的执行步骤</p>
+</li>
+</ul>
+<p>1、执行基类的构造函数，多个基类则按照继承列表的顺序</p>
+<p>2、子对象的构造函数</p>
+<p>3、执行派生类的构造函数</p>
+<p>(同一层中对虚基类构造函数的调用总是先于普通基类的构造函数)</p>
+<ul>
+<li>虚继承中派生类析构函数的执行步骤</li>
+</ul>
+<p>1、执行派生类的构造函数</p>
+<p>2、调用子对象的析构函数</p>
+<p>3、调用普通基类的析构函数</p>
+<p>(同一层中对普通析构函数的调用总先于虚基类的析构函数)</p>
+<h2 id="虚函数和多态性">虚函数和多态性</h2>
+<h3 id="虚函数">虚函数</h3>
+<ul>
+<li>虚函数的声明
+函数绑定是将函数入口和函数调用相联系的过程，分为静态绑定和动态绑定</li>
+</ul>
+<p>静态绑定在程序执行前完成，由编译系统或者操作系统装入程序计算函数的入口地址。</p>
+<p>动态绑定(迟后编译)在程序执行过程中完成，由程序自身计算函数入口地址。</p>
+<ul>
+<li>
+<p>设计虚函数的注意事项</p>
+</li>
+<li>
+<p>dynamic_cast运算符</p>
+</li>
+<li>
+<p>带虚函数的派生类对象的内存结构</p>
+</li>
+</ul>
+<p>当一个类中含有虚函数时，其对象存储在非静态数据成员最前面添加虚函数指针vfptr指向虚函数表。</p>
+<p>虚函数表中存储着当前类对象的所有虚函数地址，摆脱类型制约</p>
+<h3 id="纯虚函数和抽象类">纯虚函数和抽象类</h3>
+<ul>
+<li>纯虚函数
+特殊的虚函数，被标明为不具体实现的虚函数</li>
+</ul>
+<p>语法上，纯虚函数是在虚函数后面加上 =0，表示该虚函数无函数体，此处=不是赋值运算</p>
+<p>基类中不能对虚函数给出有意义的实现，实现留给派生类去做。</p>
+<p>含有纯虚函数的类称为抽象类</p>
+<ul>
+<li>抽象类的特点</li>
+</ul>
+<p>1、只能用作其他类的基类，不能建立抽象类对象</p>
+<p>2、抽象类不能用作参数类型、函数返回类型和显示转换类型</p>
+<p>3、可以定义和指向抽象类的指针和引用，辞职真可以指向他的派生类，进而实现多态性。与抽象类相对应，能够建立对象的类叫具体类</p>
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/cpp_overview/" data-tooltip="cpp_overview" aria-label="NEXT: cpp_overview">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/auto_tasks/" data-tooltip="Auto_tasks" aria-label="PREVIOUS: Auto_tasks">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/object-oriented-programming/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/object-oriented-programming/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/object-oriented-programming/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+    <script type="text/javascript">
+      var disqus_config = function() {
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/object-oriented-programming\/';
+        
+          this.page.identifier = '\/2022\/03\/object-oriented-programming\/'
+        
+      };
+      (function() {
+        
+        
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+          return;
+        }
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'zgjoget9-github-io';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+  
+
+
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Zhang Gaojie. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/cpp_overview/" data-tooltip="cpp_overview" aria-label="NEXT: cpp_overview">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/auto_tasks/" data-tooltip="Auto_tasks" aria-label="PREVIOUS: Auto_tasks">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/object-oriented-programming/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/object-oriented-programming/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/object-oriented-programming/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
+        <i class="far fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fobject-oriented-programming%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fobject-oriented-programming%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fobject-oriented-programming%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Zhang Gaojie</h4>
+    
+      <div id="about-card-bio">A Computer-science and Cyber-security novice</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Huazhong University of Science and Technology
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Wuhan, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zgjoget9.github.io/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://zgjoget9.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

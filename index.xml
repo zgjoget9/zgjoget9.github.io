@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhang Gaojie</title>
+    <link>https://zgjoget9.github.io/</link>
+    <description>Recent content on Zhang Gaojie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Mar 2022 20:16:12 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>default_https</title>
+      <link>https://zgjoget9.github.io/2022/03/default_https/</link>
+      <pubDate>Sun, 20 Mar 2022 20:16:12 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/default_https/</guid>
+      <description>&lt;p&gt;我们在浏览器的地址栏输入http://www.baidu.com可以发现&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TopK</title>
+      <link>https://zgjoget9.github.io/2022/03/topk/</link>
+      <pubDate>Wed, 16 Mar 2022 17:38:53 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/topk/</guid>
+      <description>&lt;p&gt;最近在刷面经，经常看到遇到TopK的问题。现在总结一下&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Reverse_substr_in_brackets</title>
+      <link>https://zgjoget9.github.io/2022/03/reverse_substr_in_brackets/</link>
+      <pubDate>Tue, 15 Mar 2022 16:41:24 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/reverse_substr_in_brackets/</guid>
+      <description>&lt;p&gt;2022-3-15 16:43:53&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cpp_overview</title>
+      <link>https://zgjoget9.github.io/2022/03/cpp_overview/</link>
+      <pubDate>Tue, 15 Mar 2022 10:31:07 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/cpp_overview/</guid>
+      <description>&lt;p&gt;cpp 总结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Object Oriented Programming</title>
+      <link>https://zgjoget9.github.io/2022/03/object-oriented-programming/</link>
+      <pubDate>Tue, 15 Mar 2022 10:26:58 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/object-oriented-programming/</guid>
+      <description>&lt;p&gt;cpp of cpp&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Auto_tasks</title>
+      <link>https://zgjoget9.github.io/2022/03/auto_tasks/</link>
+      <pubDate>Mon, 07 Mar 2022 00:25:39 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/auto_tasks/</guid>
+      <description>&lt;p&gt;今天了解了一下云服务的一些auto tasks&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Aes_written_by_kotlin</title>
+      <link>https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/</link>
+      <pubDate>Fri, 04 Mar 2022 02:46:35 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/</guid>
+      <description>&lt;p&gt;AES加密解密&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android_4</title>
+      <link>https://zgjoget9.github.io/2022/03/android_4/</link>
+      <pubDate>Thu, 03 Mar 2022 20:13:07 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/android_4/</guid>
+      <description>&lt;p&gt;UI控件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Interview_recording_bytedance</title>
+      <link>https://zgjoget9.github.io/2022/03/interview_recording_bytedance/</link>
+      <pubDate>Tue, 01 Mar 2022 20:36:02 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/interview_recording_bytedance/</guid>
+      <description>&lt;p&gt;昨天完成了字节跳动抖音客户端的一面，简单记录一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Os_interview</title>
+      <link>https://zgjoget9.github.io/2022/03/os_interview/</link>
+      <pubDate>Tue, 01 Mar 2022 09:59:49 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/os_interview/</guid>
+      <description>&lt;p&gt;os总结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>21th_Feb_algorithm_training</title>
+      <link>https://zgjoget9.github.io/2022/02/21th_feb_algorithm_training/</link>
+      <pubDate>Mon, 21 Feb 2022 12:50:25 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/21th_feb_algorithm_training/</guid>
+      <description>&lt;p&gt;由于这几天忙着做毕业设计，导致前两天的算法训练没有能够完成，那么今天就把前几天没做的题补上，然后再做个小总结&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Double_week_contest</title>
+      <link>https://zgjoget9.github.io/2022/02/double_week_contest/</link>
+      <pubDate>Sun, 20 Feb 2022 13:17:54 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/double_week_contest/</guid>
+      <description>&lt;p&gt;本周双周赛&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Android_3</title>
+      <link>https://zgjoget9.github.io/2022/02/android_3/</link>
+      <pubDate>Wed, 16 Feb 2022 10:06:03 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/android_3/</guid>
+      <description>&lt;p&gt;Activity入门篇&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Change_socks5_to_http</title>
+      <link>https://zgjoget9.github.io/2022/02/change_socks5_to_http/</link>
+      <pubDate>Sun, 13 Feb 2022 20:10:50 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/change_socks5_to_http/</guid>
+      <description>&lt;p&gt;今天调试android studio，然后调试的时候炸了，重新打开项目就卡死在sync，各种433端口failed to respond&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>9th_Feb_algorithm_training</title>
+      <link>https://zgjoget9.github.io/2022/02/9th_feb_algorithm_training/</link>
+      <pubDate>Wed, 09 Feb 2022 09:48:34 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/9th_feb_algorithm_training/</guid>
+      <description>&lt;p&gt;9th_Feb_algorithm_training&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>8th_Feb_algorithm_training</title>
+      <link>https://zgjoget9.github.io/2022/02/8th_feb_algorithm_training/</link>
+      <pubDate>Tue, 08 Feb 2022 12:45:45 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/8th_feb_algorithm_training/</guid>
+      <description>&lt;p&gt;emplace_back()和push_back()的区别是emplace_back()做了优化，只调用一次拷贝函数，而push_back()调用两次。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Url_filter</title>
+      <link>https://zgjoget9.github.io/2022/02/url_filter/</link>
+      <pubDate>Mon, 07 Feb 2022 12:06:58 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/url_filter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Record_first_double_week_contest</title>
+      <link>https://zgjoget9.github.io/2022/02/record_first_double_week_contest/</link>
+      <pubDate>Sun, 06 Feb 2022 00:13:05 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/record_first_double_week_contest/</guid>
+      <description>&lt;p&gt;记一次leetcode周赛和双周赛&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Count_Number_of_Nice_Subarrays</title>
+      <link>https://zgjoget9.github.io/2022/02/count_number_of_nice_subarrays/</link>
+      <pubDate>Sat, 05 Feb 2022 00:51:58 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/count_number_of_nice_subarrays/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Given an array of integers nums and an integer k.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Turn Blankspace to String</title>
+      <link>https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/</link>
+      <pubDate>Thu, 03 Feb 2022 21:47:19 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/</guid>
+      <description>&lt;p&gt;JZ05&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Turn Blankspace to String</title>
+      <link>https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/</link>
+      <pubDate>Thu, 03 Feb 2022 21:47:19 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/</guid>
+      <description>&lt;p&gt;JZ05&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Add_comments_to_hugo_websites</title>
+      <link>https://zgjoget9.github.io/2022/02/add_comments_to_hugo_websites/</link>
+      <pubDate>Tue, 01 Feb 2022 17:52:00 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/add_comments_to_hugo_websites/</guid>
+      <description>&lt;p&gt;写了几篇博客之后发现底下有个We were unable to load Disqus，然后由于好奇就去一探究竟&amp;hellip;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Add_disqus_to_hugo_websites</title>
+      <link>https://zgjoget9.github.io/2022/02/add_disqus_to_hugo_websites/</link>
+      <pubDate>Tue, 01 Feb 2022 17:52:00 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/02/add_disqus_to_hugo_websites/</guid>
+      <description>&lt;p&gt;写了几篇博客之后发现底下有个We were unable to load Disqus，然后由于好奇就去一探究竟&amp;hellip;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>debug_kotlin_in_android_studio</title>
+      <link>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</link>
+      <pubDate>Mon, 31 Jan 2022 23:55:03 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</guid>
+      <description>&lt;p&gt;按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>debug_kotlin_in_android_studio</title>
+      <link>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</link>
+      <pubDate>Mon, 31 Jan 2022 23:55:03 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</guid>
+      <description>&lt;p&gt;按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rebuild binarytree</title>
+      <link>https://zgjoget9.github.io/2022/01/rebuild-binarytree/</link>
+      <pubDate>Mon, 31 Jan 2022 02:35:43 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/rebuild-binarytree/</guid>
+      <description>&lt;p&gt;JZ07&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>rebuild binarytree</title>
+      <link>https://zgjoget9.github.io/2022/01/rebuild-binarytree/</link>
+      <pubDate>Mon, 31 Jan 2022 02:35:43 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/rebuild-binarytree/</guid>
+      <description>&lt;p&gt;JZ07&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Queue_based_two_stack</title>
+      <link>https://zgjoget9.github.io/2022/01/queue_based_two_stack/</link>
+      <pubDate>Mon, 31 Jan 2022 00:51:58 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/queue_based_two_stack/</guid>
+      <description>&lt;p&gt;JZ09&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Queue_based_two_stack</title>
+      <link>https://zgjoget9.github.io/2022/01/queue_based_two_stack/</link>
+      <pubDate>Mon, 31 Jan 2022 00:51:58 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/queue_based_two_stack/</guid>
+      <description>&lt;p&gt;JZ09&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>cplusplus_learning</title>
+      <link>https://zgjoget9.github.io/2022/01/cplusplus_learning/</link>
+      <pubDate>Fri, 21 Jan 2022 11:20:44 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/cplusplus_learning/</guid>
+      <description>&lt;p&gt;记录一些stl和一些技巧&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>stl_map &amp; stl_set</title>
+      <link>https://zgjoget9.github.io/2022/01/stl_map-stl_set/</link>
+      <pubDate>Wed, 12 Jan 2022 21:25:40 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/stl_map-stl_set/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stl_vector</title>
+      <link>https://zgjoget9.github.io/2022/01/stl_vector/</link>
+      <pubDate>Tue, 11 Jan 2022 16:27:47 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/stl_vector/</guid>
+      <description>&lt;p&gt;record stl learning&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Why_i_choose_hugo_instead_of_hexo</title>
+      <link>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</link>
+      <pubDate>Sat, 01 Jan 2022 17:57:25 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</guid>
+      <description>&lt;p&gt;2019年，我开始学习网站的搭建。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Why_i_choose_hugo_instead_of_hexo</title>
+      <link>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</link>
+      <pubDate>Sat, 01 Jan 2022 17:57:25 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</guid>
+      <description>&lt;p&gt;2019年，我开始学习网站的搭建。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zgjoget9.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgjoget9.github.io/1/01/</guid>
+      <description>2020-06-11  从 v2ray 切换至 v2fly mtproxy 安装下线  2020-6-5  添加 ws tls Quantmumult 导入 添加 多线程编译 修复 重复添加 cron 问题  2020-6-3  添加 Nginx ipv6 监听 TLS1.3 0 RTT (merge) 适配 Nginx ipv6 监听端口修改 变更 Nginx 版本 1.16.1 更新至 1.18.0 变更 ws path 长度从固定8位变为范围随机长度  2020-2-16 1.1.0
+ 修复 证书更新后未正确应用的问题 添加 旧配置文件保留 添加 安装流程 TLS 版本选择 变更 v2ray_qr_config_file位置 修复 v2ray daemon判断逻辑错误 添加 Nginx 冲突检测  2020-2-7 1.0.7</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zgjoget9.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgjoget9.github.io/1/01/</guid>
+      <description>HTTP2 over TLS 配置模板 </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zgjoget9.github.io/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zgjoget9.github.io/1/01/</guid>
+      <description>V2Ray 基于 Nginx 的 vmess+ws+tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权
+  Thanks for non-commercial open source development authorization by JetBrains
+ 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。
+ 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容
+Telegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess+websocket+TLS+Nginx+Website</description>
+    </item>
+    
+  </channel>
+</rss>

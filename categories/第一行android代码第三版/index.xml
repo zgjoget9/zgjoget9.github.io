@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>《第一行android代码》第三版 on Zhang Gaojie</title>
+    <link>https://zgjoget9.github.io/categories/%E7%AC%AC%E4%B8%80%E8%A1%8Candroid%E4%BB%A3%E7%A0%81%E7%AC%AC%E4%B8%89%E7%89%88/</link>
+    <description>Recent content in 《第一行android代码》第三版 on Zhang Gaojie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Jan 2022 23:55:03 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/categories/%E7%AC%AC%E4%B8%80%E8%A1%8Candroid%E4%BB%A3%E7%A0%81%E7%AC%AC%E4%B8%89%E7%89%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>debug_kotlin_in_android_studio</title>
+      <link>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</link>
+      <pubDate>Mon, 31 Jan 2022 23:55:03 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</guid>
+      <description>&lt;p&gt;按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>debug_kotlin_in_android_studio</title>
+      <link>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</link>
+      <pubDate>Mon, 31 Jan 2022 23:55:03 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</guid>
+      <description>&lt;p&gt;按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
