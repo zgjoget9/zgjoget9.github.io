@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "debug_kotlin_in_android_studio",
+  "headline": "剑指 Offer 07. 重建二叉树",
   
-  "datePublished": "2022-01-31T23:55:03+08:00",
-  "dateModified": "2022-01-31T23:55:03+08:00",
+  "datePublished": "2022-01-31T02:35:43+08:00",
+  "dateModified": "2022-01-31T02:35:43+08:00",
   "author": {
     "@type": "Person",
     "name": "Zhang Gaojie",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/zgjoget9.github.io\/2022\/01\/debug_kotlin_in_android_studio\/" 
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/01\/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。\n",
+  "description": "JZ07\n",
   "keywords": []
 }
 
@@ -43,32 +43,32 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。">
+<meta name="description" content="JZ07">
 
 
-<meta property="og:description" content="按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。">
+<meta property="og:description" content="JZ07">
 <meta property="og:type" content="article">
-<meta property="og:title" content="debug_kotlin_in_android_studio">
-<meta name="twitter:title" content="debug_kotlin_in_android_studio">
-<meta property="og:url" content="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/">
-<meta property="twitter:url" content="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/">
+<meta property="og:title" content="剑指 Offer 07. 重建二叉树">
+<meta name="twitter:title" content="剑指 Offer 07. 重建二叉树">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。">
-<meta name="twitter:description" content="按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。">
+<meta property="og:description" content="JZ07">
+<meta name="twitter:description" content="JZ07">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-01-31T23:55:03">
+    <meta property="article:published_time" content="2022-01-31T02:35:43">
   
   
-    <meta property="article:modified_time" content="2022-01-31T23:55:03">
+    <meta property="article:modified_time" content="2022-01-31T02:35:43">
   
   
   
     
-      <meta property="article:section" content="android learning">
+      <meta property="article:section" content="algorithm training">
     
-      <meta property="article:section" content="《第一行android代码》第三版">
+      <meta property="article:section" content="data structure">
     
   
   
@@ -90,14 +90,14 @@
 
 
 
-    <title>debug_kotlin_in_android_studio</title>
+    <title>剑指 Offer 07. 重建二叉树</title>
 
     <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/">
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -247,13 +247,13 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      debug_kotlin_in_android_studio
+      剑指 Offer 07. 重建二叉树
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-01-31T23:55:03&#43;08:00">
+      <time datetime="2022-01-31T02:35:43&#43;08:00">
         
   January 31, 2022
 
@@ -264,9 +264,9 @@
   
     <span>in</span>
     
-      <a class="category-link" href="https://zgjoget9.github.io/categories/android-learning">android learning</a>, 
+      <a class="category-link" href="https://zgjoget9.github.io/categories/algorithm-training">algorithm training</a>, 
     
-      <a class="category-link" href="https://zgjoget9.github.io/categories/%e7%ac%ac%e4%b8%80%e8%a1%8candroid%e4%bb%a3%e7%a0%81%e7%ac%ac%e4%b8%89%e7%89%88">《第一行android代码》第三版</a>
+      <a class="category-link" href="https://zgjoget9.github.io/categories/data-structure">data structure</a>
     
   
 
@@ -276,11 +276,52 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。</p>
-<p>经过大量参考网上解决办法失败后，我无意在郭霖大佬的csdn主页下的评论中找到答案，原文链接为<!-- raw HTML omitted --><a href="https://blog.csdn.net/weixin_45899019/article/details/120280116?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163444418016780269849197%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163444418016780269849197&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2">https://blog.csdn.net/weixin_45899019/article/details/120280116?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163444418016780269849197%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=163444418016780269849197&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2</a><!-- raw HTML omitted --></p>
-<p>因为编译器版本没有更新，但是如果应用的是最新的Andriod SDK，也就是安卓版本，就会因为配置文件不符合导致出错。</p>
-<p><img src="https://zgjoget9.github.io/img/as_kotlin1.png" alt="pic1">
-将默认使用的31修改为30后，问题就能解决。</p>
+              <p>JZ07</p>
+<p>输入某二叉树的前序遍历和中序遍历的结果，请构建该二叉树并返回其根节点。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
+来源：力扣（LeetCode）
+链接：<!-- raw HTML omitted --><a href="https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/">https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/</a><!-- raw HTML omitted -->
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>解题：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Definition for a binary tree node.
+</span><span style="color:#75715e"> * struct TreeNode {
+</span><span style="color:#75715e"> *     int val;
+</span><span style="color:#75715e"> *     TreeNode *left;
+</span><span style="color:#75715e"> *     TreeNode *right;
+</span><span style="color:#75715e"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+</span><span style="color:#75715e"> * };
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#75715e">// 递归解决：前序遍历是根左右，中序遍历是左根右，我们可以根据根来分别划分 前序数组和中序数组，然后递归处理划分的数组即可
+</span><span style="color:#75715e"></span>    TreeNode<span style="color:#f92672">*</span> buildTree(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> preorder, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> inorder) {
+        <span style="color:#66d9ef">if</span>(preorder.empty()<span style="color:#f92672">||</span>inorder.empty())<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nullptr</span>;
+        <span style="color:#75715e">// 1、建立根节点，然后根据根节点来划分 前序数组 和 中序数组
+</span><span style="color:#75715e"></span>        TreeNode <span style="color:#f92672">*</span>root<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> TreeNode(<span style="color:#f92672">*</span>preorder.begin());
+        <span style="color:#75715e">// 2、来找到 中序数组 中根节点的位置
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>find(inorder.begin(),inorder.end(),<span style="color:#f92672">*</span>preorder.begin());
+        <span style="color:#75715e">// 3、划分中序数组，根据根节点的位置，因为中序数组根节点的左边为左子树，右边为右子树
+</span><span style="color:#75715e"></span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> iLeft(inorder.begin(),it),iRight(it<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,inorder.end());
+        <span style="color:#75715e">// 4、划分前序数组，根据中序数组的左右子树的大小
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span>iLeft.size();
+        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> pLeft(preorder.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,preorder.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>n),pRight(preorder.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>n,preorder.end());
+        <span style="color:#75715e">// 5、递归处理左右子树
+</span><span style="color:#75715e"></span>        root<span style="color:#f92672">-&gt;</span>left<span style="color:#f92672">=</span>buildTree(pLeft,iLeft);
+        root<span style="color:#f92672">-&gt;</span>right<span style="color:#f92672">=</span>buildTree(pRight,iRight);
+        <span style="color:#66d9ef">return</span> root;
+    }
+};
+</code></pre></div><p>思路：</p>
+<ul>
+<li>根据pre[0]可得root</li>
+<li>根据root的位置将*in分成根的左子树和右子树两部分<br>
+auto it =findI(in.begin(),in.end(),pre[0])
+即in。begin()~in[it-1]为左子树、in[it+1]~in.end()为右子树。 这部分使用vector定义比较方便。</li>
+<li>根据左子树的大小可对*pre来进行划分
+int n=left.size()
+划分为pre[1]~pre[1+n]、pre[1+n]~pre.end()
+最后进行递归，来重构整棵二叉树。</li>
+</ul>
               
 
 
@@ -297,7 +338,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/add_disqus_to_hugo_websites/" data-tooltip="Add_disqus_to_hugo_websites" aria-label="NEXT: Add_disqus_to_hugo_websites">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" data-tooltip="debug_kotlin_in_android_studio" aria-label="NEXT: debug_kotlin_in_android_studio">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -305,7 +346,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" data-tooltip="剑指 Offer 07. 重建二叉树" aria-label="PREVIOUS: 剑指 Offer 07. 重建二叉树">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-09.-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" data-tooltip="剑指 Offer 09. 用两个栈实现队列" aria-label="PREVIOUS: 剑指 Offer 09. 用两个栈实现队列">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -323,19 +364,19 @@
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -366,9 +407,9 @@
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/01\/debug_kotlin_in_android_studio\/';
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/01\/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91\/';
         
-          this.page.identifier = '\/2022\/01\/debug_kotlin_in_android_studio\/'
+          this.page.identifier = '\/2022\/01\/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91\/'
         
       };
       (function() {
@@ -404,7 +445,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/add_disqus_to_hugo_websites/" data-tooltip="Add_disqus_to_hugo_websites" aria-label="NEXT: Add_disqus_to_hugo_websites">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" data-tooltip="debug_kotlin_in_android_studio" aria-label="NEXT: debug_kotlin_in_android_studio">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -412,7 +453,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" data-tooltip="剑指 Offer 07. 重建二叉树" aria-label="PREVIOUS: 剑指 Offer 07. 重建二叉树">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-09.-%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/" data-tooltip="剑指 Offer 09. 用两个栈实现队列" aria-label="PREVIOUS: 剑指 Offer 09. 用两个栈实现队列">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -430,19 +471,19 @@
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/%E5%89%91%E6%8C%87-offer-07.-%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -473,19 +514,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Fdebug_kotlin_in_android_studio%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2F%25E5%2589%2591%25E6%258C%2587-offer-07.-%25E9%2587%258D%25E5%25BB%25BA%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Fdebug_kotlin_in_android_studio%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2F%25E5%2589%2591%25E6%258C%2587-offer-07.-%25E9%2587%258D%25E5%25BB%25BA%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Fdebug_kotlin_in_android_studio%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2F%25E5%2589%2591%25E6%258C%2587-offer-07.-%25E9%2587%258D%25E5%25BB%25BA%25E4%25BA%258C%25E5%258F%2589%25E6%25A0%2591%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
