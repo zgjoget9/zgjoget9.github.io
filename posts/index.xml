@@ -197,30 +197,12 @@
     </item>
     
     <item>
-      <title>Add_comments_to_hugo_websites</title>
-      <link>https://zgjoget9.github.io/2022/02/add_comments_to_hugo_websites/</link>
-      <pubDate>Tue, 01 Feb 2022 17:52:00 +0800</pubDate>
-      
-      <guid>https://zgjoget9.github.io/2022/02/add_comments_to_hugo_websites/</guid>
-      <description>&lt;p&gt;写了几篇博客之后发现底下有个We were unable to load Disqus，然后由于好奇就去一探究竟&amp;hellip;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Add_disqus_to_hugo_websites</title>
       <link>https://zgjoget9.github.io/2022/02/add_disqus_to_hugo_websites/</link>
       <pubDate>Tue, 01 Feb 2022 17:52:00 +0800</pubDate>
       
       <guid>https://zgjoget9.github.io/2022/02/add_disqus_to_hugo_websites/</guid>
       <description>&lt;p&gt;写了几篇博客之后发现底下有个We were unable to load Disqus，然后由于好奇就去一探究竟&amp;hellip;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>debug_kotlin_in_android_studio</title>
-      <link>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</link>
-      <pubDate>Mon, 31 Jan 2022 23:55:03 +0800</pubDate>
-      
-      <guid>https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/</guid>
-      <description>&lt;p&gt;按照郭霖大佬在《第一行android代码》第三版书中第二章中说的，在MainActivity同级包目录下直接创建LearnKotlin.kt后，编译无法通过。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -293,15 +275,6 @@
       
       <guid>https://zgjoget9.github.io/2022/01/stl_vector/</guid>
       <description>&lt;p&gt;record stl learning&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Why_i_choose_hugo_instead_of_hexo</title>
-      <link>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</link>
-      <pubDate>Sat, 01 Jan 2022 17:57:25 +0800</pubDate>
-      
-      <guid>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</guid>
-      <description>&lt;p&gt;2019年，我开始学习网站的搭建。&lt;/p&gt;</description>
     </item>
     
     <item>

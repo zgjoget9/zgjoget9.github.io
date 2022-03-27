@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "HTTP2 over TLS 配置模板 ",
+  "description": "V2Ray 基于 Nginx 的 vmess+ws+tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权\n  Thanks for non-commercial open source development authorization by JetBrains\n 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。\n 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容\nTelegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess+websocket+TLS+Nginx+Website",
   "keywords": []
 }
 
@@ -43,18 +43,34 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="HTTP2 over TLS 配置模板 ">
+<meta name="description" content="V2Ray 基于 Nginx 的 vmess&#43;ws&#43;tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权
+  Thanks for non-commercial open source development authorization by JetBrains
+ 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。
+ 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容
+Telegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess&#43;websocket&#43;TLS&#43;Nginx&#43;Website">
 
 
-<meta property="og:description" content="HTTP2 over TLS 配置模板 ">
+<meta property="og:description" content="V2Ray 基于 Nginx 的 vmess&#43;ws&#43;tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权
+  Thanks for non-commercial open source development authorization by JetBrains
+ 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。
+ 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容
+Telegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess&#43;websocket&#43;TLS&#43;Nginx&#43;Website">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Zhang Gaojie">
 <meta name="twitter:title" content="Zhang Gaojie">
 <meta property="og:url" content="https://zgjoget9.github.io/1/01/">
 <meta property="twitter:url" content="https://zgjoget9.github.io/1/01/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="HTTP2 over TLS 配置模板 ">
-<meta name="twitter:description" content="HTTP2 over TLS 配置模板 ">
+<meta property="og:description" content="V2Ray 基于 Nginx 的 vmess&#43;ws&#43;tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权
+  Thanks for non-commercial open source development authorization by JetBrains
+ 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。
+ 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容
+Telegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess&#43;websocket&#43;TLS&#43;Nginx&#43;Website">
+<meta name="twitter:description" content="V2Ray 基于 Nginx 的 vmess&#43;ws&#43;tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权
+  Thanks for non-commercial open source development authorization by JetBrains
+ 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。
+ 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容
+Telegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess&#43;websocket&#43;TLS&#43;Nginx&#43;Website">
 <meta property="og:locale" content="en-us">
 
   
@@ -256,7 +272,99 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <h3 id="http2-over-tls-配置模板">HTTP2 over TLS 配置模板</h3>
+              <h2 id="v2ray-基于-nginx-的-vmesswstls-一键安装脚本">V2Ray 基于 Nginx 的 vmess+ws+tls 一键安装脚本</h2>
+<blockquote>
+<p>感谢 JetBrains 提供的非商业开源软件开发授权</p>
+</blockquote>
+<blockquote>
+<p>Thanks for non-commercial open source development authorization by JetBrains</p>
+</blockquote>
+<h3 id="关于-vmess-md5-认证信息-淘汰机制">关于 VMess MD5 认证信息 淘汰机制</h3>
+<blockquote>
+<p>自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。</p>
+</blockquote>
+<p>受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制
+如果您不想重新安装，您可以通过使用 <a href="https://github.com/KukiSa/VMess-fAEAD-disable">https://github.com/KukiSa/VMess-fAEAD-disable</a> 强制开启对于 MD5 认证机制的兼容</p>
+<h3 id="telegram-群组">Telegram 群组</h3>
+<ul>
+<li>telegram 交流群:https://t.me/wulabing_v2ray</li>
+<li>telegram 更新公告频道：https://t.me/wulabing_channel</li>
+</ul>
+<h3 id="准备工作">准备工作</h3>
+<ul>
+<li>准备一个域名，并将A记录添加好。</li>
+<li><a href="https://www.v2ray.com/">V2ray官方说明</a>，了解 TLS WebSocket 及 V2ray 相关信息</li>
+<li>安装好 wget</li>
+</ul>
+<h3 id="安装更新方式h2-和-ws-版本已合并">安装/更新方式（h2 和 ws 版本已合并）</h3>
+<p>Vmess+websocket+TLS+Nginx+Website</p>
+<pre tabindex="0"><code>wget -N --no-check-certificate -q -O install.sh &quot;https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh&quot; &amp;&amp; chmod +x install.sh &amp;&amp; bash install.sh
+</code></pre><p>VLESS+websocket+TLS+Nginx+Website</p>
+<pre tabindex="0"><code>wget -N --no-check-certificate -q -O install.sh &quot;https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/dev/install.sh&quot; &amp;&amp; chmod +x install.sh &amp;&amp; bash install.sh
+</code></pre><h3 id="注意事项">注意事项</h3>
+<ul>
+<li>如果你不了解脚本中各项设置的具体含义，除域名外，请使用脚本提供的默认值</li>
+<li>使用本脚本需要你拥有 Linux 基础及使用经验，了解计算机网络部分知识，计算机基础操作</li>
+<li>目前支持Debian 9+ / Ubuntu 18.04+ / Centos7+ ，部分Centos模板可能存在难以处理的编译问题，建议遇到编译问题时，请更换至其他系统模板</li>
+<li>群主仅提供极其有限的支持，如有问题可以询问群友</li>
+<li>每周日的凌晨3点，Nginx 会自动重启以配合证书的签发定时任务进行，在此期间，节点无法正常连接，预计持续时间为若干秒至两分钟</li>
+</ul>
+<h3 id="更新日志">更新日志</h3>
+<blockquote>
+<p>更新内容请查看 CHANGELOG.md</p>
+</blockquote>
+<h3 id="鸣谢">鸣谢</h3>
+<ul>
+<li><del>本脚本的另一个分支版本（Use Host）地址： <a href="https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey">https://github.com/dylanbai8/V2Ray_ws-tls_Website_onekey</a> 请根据需求进行选择</del> 该作者可能已停止维护</li>
+<li>本脚本中 MTProxy-go TLS 版本项目引用 <a href="https://github.com/whunt1/onekeymakemtg">https://github.com/whunt1/onekeymakemtg</a> 在此感谢 whunt1</li>
+<li>本脚本中 锐速4合1脚本原项目引用 <a href="https://www.94ish.me/1635.html">https://www.94ish.me/1635.html</a> 在此感谢</li>
+<li>本脚本中 锐速4合1脚本修改版项目引用 <a href="https://github.com/ylx2016/Linux-NetSpeed">https://github.com/ylx2016/Linux-NetSpeed</a> 在此感谢 ylx2016</li>
+</ul>
+<h3 id="证书">证书</h3>
+<blockquote>
+<p>如果你已经拥有了你所使用域名的证书文件，可以将 crt 和 key 文件命名为 v2ray.crt v2ray.key 放在 /data 目录下（若目录不存在请先建目录），请注意证书文件权限及证书有效期，自定义证书有效期过期后请自行续签</p>
+</blockquote>
+<p>脚本支持自动生成 let&rsquo;s encrypted 证书，有效期3个月，理论上自动生成的证书支持自动续签</p>
+<h3 id="查看客户端配置">查看客户端配置</h3>
+<p><code>cat ~/v2ray_info.txt</code></p>
+<h3 id="v2ray-简介">V2ray 简介</h3>
+<ul>
+<li>V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。</li>
+<li>本脚本为一键完全配置脚本，在所有流程正常运行完毕后，直接按照输出结果设置客户端即可使用</li>
+<li>请注意：我们依然强烈建议你全方面的了解整个程序的工作流程及原理</li>
+</ul>
+<h3 id="建议单服务器仅搭建单个代理">建议单服务器仅搭建单个代理</h3>
+<ul>
+<li>本脚本默认安装最新版本的V2ray core</li>
+<li>V2ray core 目前最新版本为 4.22.1（同时请注意客户端 core 的同步更新，需要保证客户端内核版本 &gt;= 服务端内核版本）</li>
+<li>建议使用默认的443端口作为连接端口</li>
+<li>伪装内容可自行替换。</li>
+</ul>
+<h3 id="注意事项-1">注意事项</h3>
+<ul>
+<li>推荐在纯净环境下使用本脚本，如果你是新手，请不要使用Centos系统。</li>
+<li>在尝试本脚本确实可用之前，请不要将本程序应用于生产环境中。</li>
+<li>该程序依赖 Nginx 实现相关功能，请使用 <a href="https://lnmp.org">LNMP</a> 或其他类似携带 Nginx 脚本安装过 Nginx 的用户特别留意，使用本脚本可能会导致无法预知的错误（未测试，若存在，后续版本可能会处理本问题）。</li>
+<li>V2Ray 的部分功能依赖于系统时间，请确保您使用V2RAY程序的系统 UTC 时间误差在三分钟之内，时区无关。</li>
+<li>本 bash 依赖于 <a href="https://install.direct/go.sh">V2ray 官方安装脚本</a> 及 <a href="https://github.com/Neilpang/acme.sh">acme.sh</a> 工作。</li>
+<li>Centos 系统用户请预先在防火墙中放行程序相关端口（默认：80，443）</li>
+</ul>
+<h3 id="启动方式">启动方式</h3>
+<p>启动 V2ray：<code>systemctl start v2ray</code></p>
+<p>停止 V2ray：<code>systemctl stop v2ray</code></p>
+<p>启动 Nginx：<code>systemctl start nginx</code></p>
+<p>停止 Nginx：<code>systemctl stop nginx</code></p>
+<h3 id="相关目录">相关目录</h3>
+<p>Web 目录：<code>/home/wwwroot/3DCEList</code></p>
+<p>V2ray 服务端配置：<code>/etc/v2ray/config.json</code></p>
+<p>V2ray 客户端配置: <code>~/v2ray_info.inf</code></p>
+<p>Nginx 目录： <code>/etc/nginx</code></p>
+<p>证书文件: <code>/data/v2ray.key 和 /data/v2ray.crt</code> 请注意证书权限设置</p>
+<h3 id="捐赠">捐赠</h3>
+<p>您可以使用我的 搬瓦工 AFF 购买 VPS</p>
+<p><a href="https://bandwagonhost.com/aff.php?aff=63939">https://bandwagonhost.com/aff.php?aff=63939</a></p>
+<p>您可以使用我的 justmysocks AFF 购买搬瓦工提供的代理</p>
+<p><a href="https://justmysocks.net/members/aff.php?aff=17621">https://justmysocks.net/members/aff.php?aff=17621</a></p>
 
               
 
@@ -282,7 +390,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/1/01/" data-tooltip="" aria-label="PREVIOUS: ">
+            <a class="post-action-btn btn btn--disabled">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -389,285 +497,7 @@
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/1/01/" data-tooltip="" aria-label="PREVIOUS: ">
-          
-              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
-              <i class="fa fa-angle-right"></i>
-            </a>
-        </li>
-      
-    </ul>
-  </nav>
-<ul class="post-actions post-action-share" >
-  
-    <li class="post-action hide-lg hide-md hide-sm">
-      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
-      </a>
-    </li>
-    
-      <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/1/01/" title="Share on Facebook" aria-label="Share on Facebook">
-          <i class="fab fa-facebook-square" aria-hidden="true"></i>
-        </a>
-      </li>
-    
-      <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/1/01/" title="Share on Twitter" aria-label="Share on Twitter">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
-        </a>
-      </li>
-    
-      <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/1/01/" title="Share on Linkedin" aria-label="Share on Linkedin">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
-      </li>
-    
-  
-  
-    <li class="post-action">
-      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
-        <i class="far fa-comment"></i>
-      </a>
-    </li>
-  
-  <li class="post-action">
-    
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    
-    </a>
-  </li>
-</ul>
-</div>
-
-
-      </div>
-      
-<div id="share-options-bar" class="share-options-bar" data-behavior="4">
-  <i id="btn-close-shareoptions" class="fa fa-times"></i>
-  <ul class="share-options">
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F1%2F01%2F" aria-label="Share on Facebook">
-          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F1%2F01%2F" aria-label="Share on Twitter">
-          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
-        </a>
-      </li>
-    
-      <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F1%2F01%2F" aria-label="Share on Linkedin">
-          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-
-
-    </div>
-    
-    <div id="about">
-  <div id="about-card">
-    <div id="about-btn-close">
-      <i class="fa fa-times"></i>
-    </div>
-    
-      <img id="about-card-picture" src="https://zgjoget9.github.io/img/avatar.jpg" alt="Author&#39;s picture" />
-    
-    <h4 id="about-card-name">Zhang Gaojie</h4>
-    
-      <div id="about-card-bio">A Computer-science and Cyber-security novice</div>
-    
-    
-      <div id="about-card-job">
-        <i class="fa fa-briefcase"></i>
-        <br/>
-        Huazhong University of Science and Technology
-      </div>
-    
-    
-      <div id="about-card-location">
-        <i class="fa fa-map-marker-alt"></i>
-        <br/>
-        Wuhan, China
-      </div>
-    
-  </div>
-</div>
-
-    
-
-    
-  
-    
-      <div id="cover" style="background-image:url('https://zgjoget9.github.io/images/cover.jpg');"></div>
-    
-  
-
-
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-<script src="https://zgjoget9.github.io/js/script-yqzy9wdlzix4lbbwdnzvwx3egsne77earqmn73v9uno8aupuph8wfguccut.min.js"></script>
-
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
-  
-
-  
-    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
-  
-
-
-<script>
-$(document).ready(function() {
-  hljs.configure({ classPrefix: '', useBR: false });
-  $('pre.code-highlight > code, pre > code').each(function(i, block) {
-    if (!$(this).hasClass('codeblock')) {
-      $(this).addClass('codeblock');
-    }
-    hljs.highlightBlock(block);
-  });
-});
-</script>
-
-
-
-
-    
-  </body>
-</html>
-
--action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/1/01/" title="Share on Twitter" aria-label="Share on Twitter">
-          <i class="fab fa-twitter" aria-hidden="true"></i>
-        </a>
-      </li>
-    
-      <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/1/01/" title="Share on Linkedin" aria-label="Share on Linkedin">
-          <i class="fab fa-linkedin" aria-hidden="true"></i>
-        </a>
-      </li>
-    
-  
-  
-    <li class="post-action">
-      <a class="post-action-btn btn btn--default" href="#disqus_thread" aria-label="Leave a comment">
-        <i class="far fa-comment"></i>
-      </a>
-    </li>
-  
-  <li class="post-action">
-    
-      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
-      <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    
-    </a>
-  </li>
-</ul>
-</div>
-
-
-            
-  
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-    </div>
-    <script type="text/javascript">
-      var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/1\/01\/';
-        
-          this.page.identifier = '\/1\/01\/'
-        
-      };
-      (function() {
-        
-        
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-          document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-          return;
-        }
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        var disqus_shortname = 'zgjoget9-github-io';
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-  
-
-
-          </div>
-        </article>
-        <footer id="footer" class="main-content-wrap">
-  <span class="copyrights">
-    &copy; 2022 Zhang Gaojie. All Rights Reserved
-  </span>
-</footer>
-
-      </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-        
-<div class="post-actions-wrap">
-  <nav >
-    <ul class="post-actions post-action-nav">
-      
-        <li class="post-action">
-          
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/" data-tooltip="Why_i_choose_hugo_instead_of_hexo" aria-label="NEXT: Why_i_choose_hugo_instead_of_hexo">
-          
-              <i class="fa fa-angle-left"></i>
-              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
-            </a>
-        </li>
-        <li class="post-action">
-          
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/1/01/" data-tooltip="" aria-label="PREVIOUS: ">
+            <a class="post-action-btn btn btn--disabled">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
