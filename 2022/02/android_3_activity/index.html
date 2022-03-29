@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "rebuild binarytree",
+  "headline": "Android_3_Activity",
   
-  "datePublished": "2022-01-31T02:35:43+08:00",
-  "dateModified": "2022-01-31T02:35:43+08:00",
+  "datePublished": "2022-02-16T10:06:03+08:00",
+  "dateModified": "2022-02-16T10:06:03+08:00",
   "author": {
     "@type": "Person",
     "name": "Zhang Gaojie",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/zgjoget9.github.io\/2022\/01\/rebuild-binarytree\/" 
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/02\/android_3_activity\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "JZ07\n",
+  "description": "Activity入门篇\n",
   "keywords": []
 }
 
@@ -43,33 +43,27 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="JZ07">
+<meta name="description" content="Activity入门篇">
 
 
-<meta property="og:description" content="JZ07">
+<meta property="og:description" content="Activity入门篇">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rebuild binarytree">
-<meta name="twitter:title" content="rebuild binarytree">
-<meta property="og:url" content="https://zgjoget9.github.io/2022/01/rebuild-binarytree/">
-<meta property="twitter:url" content="https://zgjoget9.github.io/2022/01/rebuild-binarytree/">
+<meta property="og:title" content="Android_3_Activity">
+<meta name="twitter:title" content="Android_3_Activity">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/02/android_3_activity/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/02/android_3_activity/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="JZ07">
-<meta name="twitter:description" content="JZ07">
+<meta property="og:description" content="Activity入门篇">
+<meta name="twitter:description" content="Activity入门篇">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-01-31T02:35:43">
+    <meta property="article:published_time" content="2022-02-16T10:06:03">
   
   
-    <meta property="article:modified_time" content="2022-01-31T02:35:43">
+    <meta property="article:modified_time" content="2022-02-16T10:06:03">
   
   
-  
-    
-      <meta property="article:section" content="algorithm training">
-    
-      <meta property="article:section" content="data structure">
-    
   
   
 
@@ -90,14 +84,14 @@
 
 
 
-    <title>rebuild binarytree</title>
+    <title>Android_3_Activity</title>
 
     <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://zgjoget9.github.io/2022/01/rebuild-binarytree/">
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/02/android_3_activity/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -247,80 +241,212 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      rebuild binarytree
+      Android_3_Activity
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-01-31T02:35:43&#43;08:00">
+      <time datetime="2022-02-16T10:06:03&#43;08:00">
         
-  January 31, 2022
+  February 16, 2022
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://zgjoget9.github.io/categories/algorithm-training">algorithm training</a>, 
-    
-      <a class="category-link" href="https://zgjoget9.github.io/categories/data-structure">data structure</a>
-    
-  
-
   </div>
 
 </div>
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>JZ07</p>
-<p>输入某二叉树的前序遍历和中序遍历的结果，请构建该二叉树并返回其根节点。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
-来源：力扣（LeetCode）
-链接：<!-- raw HTML omitted --><a href="https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/">https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/</a><!-- raw HTML omitted -->
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<p>解题：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">/**
-</span><span style="color:#75715e"> * Definition for a binary tree node.
-</span><span style="color:#75715e"> * struct TreeNode {
-</span><span style="color:#75715e"> *     int val;
-</span><span style="color:#75715e"> *     TreeNode *left;
-</span><span style="color:#75715e"> *     TreeNode *right;
-</span><span style="color:#75715e"> *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-</span><span style="color:#75715e"> * };
-</span><span style="color:#75715e"> */</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-    <span style="color:#75715e">// 递归解决：前序遍历是根左右，中序遍历是左根右，我们可以根据根来分别划分 前序数组和中序数组，然后递归处理划分的数组即可
-</span><span style="color:#75715e"></span>    TreeNode<span style="color:#f92672">*</span> buildTree(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> preorder, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> inorder) {
-        <span style="color:#66d9ef">if</span>(preorder.empty()<span style="color:#f92672">||</span>inorder.empty())<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nullptr</span>;
-        <span style="color:#75715e">// 1、建立根节点，然后根据根节点来划分 前序数组 和 中序数组
-</span><span style="color:#75715e"></span>        TreeNode <span style="color:#f92672">*</span>root<span style="color:#f92672">=</span><span style="color:#66d9ef">new</span> TreeNode(<span style="color:#f92672">*</span>preorder.begin());
-        <span style="color:#75715e">// 2、来找到 中序数组 中根节点的位置
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">auto</span> it<span style="color:#f92672">=</span>find(inorder.begin(),inorder.end(),<span style="color:#f92672">*</span>preorder.begin());
-        <span style="color:#75715e">// 3、划分中序数组，根据根节点的位置，因为中序数组根节点的左边为左子树，右边为右子树
-</span><span style="color:#75715e"></span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> iLeft(inorder.begin(),it),iRight(it<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,inorder.end());
-        <span style="color:#75715e">// 4、划分前序数组，根据中序数组的左右子树的大小
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> n<span style="color:#f92672">=</span>iLeft.size();
-        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> pLeft(preorder.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,preorder.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>n),pRight(preorder.begin()<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>n,preorder.end());
-        <span style="color:#75715e">// 5、递归处理左右子树
-</span><span style="color:#75715e"></span>        root<span style="color:#f92672">-&gt;</span>left<span style="color:#f92672">=</span>buildTree(pLeft,iLeft);
-        root<span style="color:#f92672">-&gt;</span>right<span style="color:#f92672">=</span>buildTree(pRight,iRight);
-        <span style="color:#66d9ef">return</span> root;
-    }
-};
-</code></pre></div><p>思路：</p>
+              <p>Activity入门篇</p>
 <ul>
-<li>根据pre[0]可得root</li>
-<li>根据root的位置将*in分成根的左子树和右子树两部分<br>
-auto it =findI(in.begin(),in.end(),pre[0])
-即in。begin()~in[it-1]为左子树、in[it+1]~in.end()为右子树。 这部分使用vector定义比较方便。</li>
-<li>根据左子树的大小可对*pre来进行划分
-int n=left.size()
-划分为pre[1]~pre[1+n]、pre[1+n]~pre.end()
-最后进行递归，来重构整棵二叉树。</li>
+<li>
+<p>创建Activity</p>
+</li>
+<li>
+<p>添加button1</p>
+</li>
+<li>
+<p>Toast</p>
+</li>
+</ul>
+<blockquote>
+<p>短提示</p>
+</blockquote>
+<ul>
+<li>menu(add/remove)</li>
+</ul>
+<blockquote>
+<p>重写函数</p>
+</blockquote>
+<pre tabindex="0"><code>override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    menuInflater.inflate(R.menu.main,menu)
+    return true
+}
+override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    when(item.itemId){
+        R.id.add_item-&gt;Toast.makeText(this,&quot;You clicked Add&quot;,Toast.LENGTH_SHORT).show()
+        R.id.remove_item-&gt;Toast.makeText(this,&quot;You clicked Remove&quot;,Toast.LENGTH_SHORT).show()
+
+    }
+}
+</code></pre><ul>
+<li>销毁Activity</li>
+</ul>
+<blockquote>
+<p>finish()或者返回键</p>
+</blockquote>
+<ul>
+<li>intent(Activity之间切换)</li>
+</ul>
+<blockquote>
+<p>显式、隐式</p>
+</blockquote>
+<blockquote>
+<p>更多的隐式intent，如url、tel、geo</p>
+</blockquote>
+<pre tabindex="0"><code>val intent=Intent(Intent.ACTION_VIEW)
+intent.data= Uri.parse(&quot;https://zgjoget9.github.io&quot;)
+startActivity(intent)
+</code></pre><ul>
+<li>
+<p>使用intent来传输数据</p>
+<ul>
+<li>向下一个Activity传输数据：</li>
+</ul>
+<blockquote>
+<pre><code> putExtra(key,val)
+</code></pre>
+</blockquote>
+<ul>
+<li>返回数据给上个Activity</li>
+</ul>
+<blockquote>
+<pre><code>startActivityForResult(intent,1)
+</code></pre>
+</blockquote>
+</li>
+<li>
+<p>生命周期</p>
+<ul>
+<li>返回栈</li>
+<li>运行态、暂停态、停止态、销毁态</li>
+</ul>
+<p>Activity的生命周期：</p>
+<p><img src="https://zgjoget9.github.io/img/android_3_1.jpg" alt="pic1"></p>
+<ul>
+<li>
+<p>完整生存期</p>
+<p>1、onCreate()</p>
+<pre><code>  Activity第一次被创建时被调用，完成Activity初始化操作(加载布局、绑定事件等)
+</code></pre>
+<p>6、onDestroy()</p>
+<pre><code>  在Activity被销毁时调用，之后Activity变为被销毁状态。
+</code></pre>
+</li>
+<li>
+<p>可见生存期</p>
+<p>2、onstart()</p>
+<pre><code>  Activity由不可见变为可见时的调用
+</code></pre>
+<p>5、onStop()</p>
+<pre><code>  在Activity完全不可见时调用
+
+  和onPause()的区别是如果新的Activity是一个对话框式的Activity, onStop()不会执行, onPause()会得到执行。
+</code></pre>
+</li>
+<li>
+<p>前台生存期</p>
+<p>3、onResume()</p>
+<pre><code>  在Activity准备好和用户进行交互时调用，此时Activity一定位于返回栈的栈顶，并处于运行状态
+</code></pre>
+<p>4、onPause()</p>
+<pre><code>  在系统准备去启动或者恢复另一个Activity的调用，通常会在这个方法中将一些消耗CPU的资源释放掉，并保存一些关键数据。
+
+  方法执行速度一定要快，不然会影响到新的栈顶Activity的使用
+</code></pre>
+</li>
+<li>
+<p>不成对的方法onRestart()</p>
+<p>在Activity由停止态变为运行态之前调用，使Activity重新启动</p>
+</li>
+<li>
+<p>onSaveInstanceState()回调方法</p>
+</li>
+</ul>
+</li>
+<li>
+<p>启动模式</p>
+<ul>
+<li>
+<p>standard
+Activity默认启动模式，不进行显示指定的情况下Activity的默认启动模式。</p>
+<p>每当启动一个新的Activity都会在返回栈入栈，系统不会在乎其是否已经存在在返回栈，每次启动都会创建一个新的Activity实例</p>
+<p>standard原理如图：</p>
+<p><img src="https://zgjoget9.github.io/img/android_3_2.jpg" alt="pic2"></p>
+</li>
+<li>
+<p>singleTop</p>
+<p>当Activity指定启动模式为singleTop时, 如果发现目前栈顶已经是该Activity，则认为可以直接使用她，不用新创建Activity示例。</p>
+</li>
+<li>
+<p>singleTask</p>
+<p>在启动Activity时, 如果指定其创建模式为singleTask，则系统首先会在返回栈中检查是否存在该Activity，如果存在则pop掉其前面所有的Activity, 使其留在栈顶, 如果没有发现则创建一个新的Activity实例。</p>
+</li>
+<li>
+<p>singleInstance</p>
+<p>四种启动模式中最复杂的一种, 启动模式指定为singleInstance模式的Activity回启动一个新的返回栈来管理Activity</p>
+<p>(如果singleTask模式下指定了不同的taskAffinity，也会启动一个新的返回栈)</p>
+<p>假设Activity允许被其他应用程序调用, 前三种都做不到, 因为每个应用程序都有自己的返回栈, 同一个Activity在不同的返回栈中入栈必然创建新的实例。</p>
+<p>在这种模式下，会有一个单独的返回栈来管理这个Activity, 不管哪个应用程序访问该Activity都共用一个返回栈, 进而解决共享Activity实例的问题。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Activity最佳实践</p>
+<ul>
+<li>
+<p>知晓当前处于哪一个Activity</p>
+</li>
+<li>
+<p>随时随地退出程序</p>
+</li>
+<li>
+<p>启动Activity的最佳写法</p>
+</li>
+</ul>
+</li>
+<li>
+<p>kotlin 标准函数 &amp; 静态方法</p>
+<ul>
+<li>
+<p>标准函数with、run、apply</p>
+<p>kotlin中的标准函数指的是Standard.kt文件中定义的函数。</p>
+</li>
+<li>
+<p>静态方法</p>
+<p>定义：不需要创建实例就能调用的方法</p>
+<p>kotlin提供比静态方法更好用的语法特性: 单例类</p>
+<p>实现静态方法：</p>
+<ul>
+<li>
+<p>注解</p>
+<blockquote>
+<p><strong>@JvmStatic</strong> //不常用</p>
+</blockquote>
+</li>
+<li>
+<p>顶层方法</p>
+<blockquote>
+<p>顶层方法指的是那些没有定义在任何类的方法</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
               
 
@@ -338,7 +464,7 @@ int n=left.size()
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" data-tooltip="debug_kotlin_in_android_studio" aria-label="NEXT: debug_kotlin_in_android_studio">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/double_week_contest/" data-tooltip="Double_week_contest" aria-label="NEXT: Double_week_contest">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -346,7 +472,7 @@ int n=left.size()
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/rebuild-binarytree/" data-tooltip="rebuild binarytree" aria-label="PREVIOUS: rebuild binarytree">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/change_socks5_to_http/" data-tooltip="Change_socks5_to_http" aria-label="PREVIOUS: Change_socks5_to_http">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -364,19 +490,19 @@ int n=left.size()
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/rebuild-binarytree/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/02/android_3_activity/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/rebuild-binarytree/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/02/android_3_activity/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/rebuild-binarytree/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/02/android_3_activity/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -407,9 +533,9 @@ int n=left.size()
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/01\/rebuild-binarytree\/';
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/02\/android_3_activity\/';
         
-          this.page.identifier = '\/2022\/01\/rebuild-binarytree\/'
+          this.page.identifier = '\/2022\/02\/android_3_activity\/'
         
       };
       (function() {
@@ -445,7 +571,7 @@ int n=left.size()
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/debug_kotlin_in_android_studio/" data-tooltip="debug_kotlin_in_android_studio" aria-label="NEXT: debug_kotlin_in_android_studio">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/double_week_contest/" data-tooltip="Double_week_contest" aria-label="NEXT: Double_week_contest">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -453,7 +579,7 @@ int n=left.size()
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/01/rebuild-binarytree/" data-tooltip="rebuild binarytree" aria-label="PREVIOUS: rebuild binarytree">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/change_socks5_to_http/" data-tooltip="Change_socks5_to_http" aria-label="PREVIOUS: Change_socks5_to_http">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -471,19 +597,19 @@ int n=left.size()
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/01/rebuild-binarytree/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/02/android_3_activity/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/01/rebuild-binarytree/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/02/android_3_activity/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/01/rebuild-binarytree/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/02/android_3_activity/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -514,19 +640,19 @@ int n=left.size()
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Frebuild-binarytree%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Fandroid_3_activity%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Frebuild-binarytree%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Fandroid_3_activity%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F01%2Frebuild-binarytree%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Fandroid_3_activity%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

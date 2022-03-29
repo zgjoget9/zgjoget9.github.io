@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Turn Blankspace to String",
+  "headline": "Android_4_UI_controls",
   
-  "datePublished": "2022-02-03T21:47:19+08:00",
-  "dateModified": "2022-02-03T21:47:19+08:00",
+  "datePublished": "2022-03-03T20:13:07+08:00",
+  "dateModified": "2022-03-03T20:13:07+08:00",
   "author": {
     "@type": "Person",
     "name": "Zhang Gaojie",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/zgjoget9.github.io\/2022\/02\/turn-blankspace-to-string\/" 
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/android_4_ui_controls\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "JZ05\n",
+  "description": "UI控件\n",
   "keywords": []
 }
 
@@ -43,33 +43,27 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="JZ05">
+<meta name="description" content="UI控件">
 
 
-<meta property="og:description" content="JZ05">
+<meta property="og:description" content="UI控件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Turn Blankspace to String">
-<meta name="twitter:title" content="Turn Blankspace to String">
-<meta property="og:url" content="https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/">
-<meta property="twitter:url" content="https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/">
+<meta property="og:title" content="Android_4_UI_controls">
+<meta name="twitter:title" content="Android_4_UI_controls">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/03/android_4_ui_controls/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/android_4_ui_controls/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="JZ05">
-<meta name="twitter:description" content="JZ05">
+<meta property="og:description" content="UI控件">
+<meta name="twitter:description" content="UI控件">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-02-03T21:47:19">
+    <meta property="article:published_time" content="2022-03-03T20:13:07">
   
   
-    <meta property="article:modified_time" content="2022-02-03T21:47:19">
+    <meta property="article:modified_time" content="2022-03-03T20:13:07">
   
   
-  
-    
-      <meta property="article:section" content="algorithm training">
-    
-      <meta property="article:section" content="grammar">
-    
   
   
 
@@ -90,14 +84,14 @@
 
 
 
-    <title>Turn Blankspace to String</title>
+    <title>Android_4_UI_controls</title>
 
     <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/">
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/android_4_ui_controls/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -247,89 +241,163 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Turn Blankspace to String
+      Android_4_UI_controls
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-02-03T21:47:19&#43;08:00">
+      <time datetime="2022-03-03T20:13:07&#43;08:00">
         
-  February 3, 2022
+  March 3, 2022
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://zgjoget9.github.io/categories/algorithm-training">algorithm training</a>, 
-    
-      <a class="category-link" href="https://zgjoget9.github.io/categories/grammar">grammar</a>
-    
-  
-
   </div>
 
 </div>
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>JZ05</p>
-<p>请实现一个函数，把字符串 s 中的每个空格替换成&quot;%20&quot;。
-<a href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/">leetcode链接</a><br>
-这题就体现出c语言的弊端了，字符拼接和字符串的处理非常麻烦，所以使用cpp的string类来进行处理，对输入的字符串进行遍历，每当遇到blankspace就使用replace函数进行替换即可。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
-<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-    string replaceSpace(string s) {
-        string blank<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>,rep<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;%20&#34;</span>;
-        size_t it;
-        <span style="color:#66d9ef">while</span>((it<span style="color:#f92672">=</span>s.find(blank))<span style="color:#f92672">!=</span>string<span style="color:#f92672">::</span>npos){
-            s.replace(it,<span style="color:#ae81ff">1</span>,rep);<span style="color:#75715e">//函数原型string&amp; replace (size_t pos, size_t len, const char* s);
-</span><span style="color:#75715e"></span>        }
-        <span style="color:#66d9ef">return</span> s;
-    }
-};
-</code></pre></div><p>由于是现学的string类，照着参考示例对字符串使用size_t来进行遍历，
-同时我还了解到可以使用以下三种方法来对string类来进行遍历：</p>
+              <p>UI控件</p>
 <ul>
-<li>cpp11</li>
-</ul>
-<pre tabindex="0"><code>for(auto it:str){
-    //do something;
-}
-</code></pre><p>这里的it是字符char型变量。</p>
+<li>
+<p>常见控件</p>
 <ul>
-<li>iterator</li>
+<li>
+<p>TextView
+最简单的控件</p>
+<p>所有控件都有android:layout_width、android:layout_height指定控件宽度和高度</p>
+<p>可选值为match_parent、wrap_content、和固定值</p>
+<p>match_parent表示让空间大小和父布局大小一样</p>
+<p>wrap_content表示控件大小能刚好包含住里面的内容</p>
+<p>固定值表示一个固定的尺寸, 单位一般为dp(一种和屏幕密度无关的尺寸单位)</p>
+<pre tabindex="0"><code>&lt;TextView
+    android:id=&quot;@+id/textView&quot;
+
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:gravity=&quot;center&quot;
+    android:textColor=&quot;#00ff00&quot;
+    android:textSize=&quot;40sp&quot;
+    android:text=&quot;This isTextView!&quot;
+    app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+    app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+    app:layout_constraintRight_toRightOf=&quot;parent&quot;
+    app:layout_constraintTop_toTopOf=&quot;parent&quot; /&gt;
+</code></pre><p>上述代码布局如图：</p>
+<p><img src="https://zgjoget9.github.io/img/android_4_1.png" alt="pic1"></p>
+</li>
+<li>
+<p>Button</p>
+<p>android:text默认大写, 禁用需要添加android:textAllCaps=&ldquo;false&rdquo;</p>
+<pre tabindex="0"><code>&lt;Button
+    android:id=&quot;@+id/button&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;wrap_content&quot;
+    android:textAllCaps=&quot;false&quot;
+    android:text=&quot;按钮&quot;/&gt;
+</code></pre><p>上述代码布局如图：</p>
+<p><img src="https://zgjoget9.github.io/img/android_4_2.png" alt="pic2"></p>
+<p>在定义布局之后可以再Activity中定义button.setOnclickListener{}</p>
+<p>另外还可以重写onClick接口</p>
+</li>
+<li>
+<p>EditText</p>
+<pre tabindex="0"><code>&lt;EditText
+android:id=&quot;@+id/EditText&quot;
+android:layout_width=&quot;match_parent&quot;
+android:layout_height=&quot;wrap_content&quot;
+android:hint=&quot;write something here&quot;/&gt;/&gt;
+</code></pre><p>上述代码布局如图：</p>
+<p><img src="https://zgjoget9.github.io/img/android_4_3.png" alt="pic3"></p>
+</li>
+<li>
+<p>ImageView</p>
+<p>插入图片</p>
+</li>
+<li>
+<p>ProgressBar</p>
+<p>进度条</p>
+</li>
+<li>
+<p>AlertDialog</p>
+<p>弹出一个对话框</p>
+</li>
 </ul>
-<pre tabindex="0"><code>iterator it;
-while(it!=s.end()){
-    //do something;
-}
-</code></pre><p>这里的it是类似于把string看成c语言中的字符数组，it类似于字符数组的下标。</p>
+</li>
+<li>
+<p>三种基本布局</p>
 <ul>
-<li>size_t</li>
+<li>
+<p>LinearLayout</p>
+<p>线性布局，控件在线性方向上依次排列</p>
+<p>android:oroentation=&ldquo;vertical&rdquo;/&ldquo;horizontal&rdquo;(垂直/水平)</p>
+<p>horizontal时, width不能定义为match_parent, 这样的话一个控件就会沾满整行，导致其他控件被挡住、同理vertical时height不能定义为match_parent</p>
+</li>
+<li>
+<p>RelativeLayout</p>
+<p>称为相对布局，排列更加随意</p>
+</li>
+<li>
+<p>FrameLayout</p>
+<p>帧布局、相对于前两种布局简单很多，所以应用场景少很多。</p>
+<p>没有丰富的布局定位方式，所有控件默认放在布局的左上角</p>
+</li>
 </ul>
-<pre tabindex="0"><code>size_t it;
-while(it=s.find(str1)!=string::npos){
-   //do something; 
-}
-</code></pre><p>这就是本题使用的方法下面先介绍一下str.find()和str.npos:</p>
-<p>string::find()函数：是一个字符或字符串查找函数，该函数有唯一的返回类型，即string::size_type，即一个无符号整形类型，可能是整数也可能是长整数。如果查找成功，返回按照查找规则找到的第一个字符或者子串的位置；如果查找失败，返回string::npos,即-1(unsigned)</p>
-<p>string::npos静态成员常量：是对类型为size_t的元素具有最大可能的值。当这个值在字符串成员函数中的长度或者子长度被使用时，该值表示“直到字符串结尾”。作为返回值他通常被用作表明没有匹配。
-string::npos是这样定义的：static const size_type npos = -1;</p>
-<p>size_t和int</p>
-<p>size_t是一些C/C++标准在stddef.h中定义的。这个类型足以用来表示对象的大小。size_t的真实类型与操作系统有关。</p>
-<p>在32位架构中被普遍定义为：
-typedef   unsigned int size_t;</p>
-<p>而在64位架构中被定义为：
-typedef  unsigned long size_t;</p>
-<p>size_t在32位架构上是4字节，在64位架构上是8字节，在不同架构上进行编译时需要注意这个问题。而int在不同架构下都是4字节，与size_t不同；且int为带符号数，size_t为无符号数。</p>
-<blockquote>
-<p>为什么有时候不用int，而是用size_type或者size_t:</p>
-</blockquote>
-<p>与int固定四个字节不同有所不同,size_t的取值range是目标平台下最大可能的数组尺寸,一些平台下size_t的范围小于int的正数范围,又或者大于unsigned int. 使用Int既有可能浪费，又有可能范围不够大。</p>
+</li>
+<li>
+<p>自定义控件</p>
+<ul>
+<li>
+<p>引入布局</p>
+</li>
+<li>
+<p>创建自定义控件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ListView</p>
+<p>最常用也是最难用的控件</p>
+<p>listOf(&quot;&quot;)</p>
+<ul>
+<li>
+<p>ListView简单用法</p>
+</li>
+<li>
+<p>定制ListView界面</p>
+</li>
+<li>
+<p>提高ListView运行效率</p>
+</li>
+<li>
+<p>ListView点击事件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RecyclerView</p>
+<ul>
+<li>
+<p>滚动控件基本用法</p>
+</li>
+<li>
+<p>实现横向滚动和瀑布流布局</p>
+</li>
+<li>
+<p>RecyclerView点击事件</p>
+</li>
+</ul>
+</li>
+<li>
+<p>UI实战：聊天界面</p>
+</li>
+<li>
+<p>Kotlin: 延迟初始化和密封类</p>
+</li>
+</ul>
               
 
 
@@ -346,7 +414,7 @@ typedef  unsigned long size_t;</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/count_number_of_nice_subarrays/" data-tooltip="Count_Number_of_Nice_Subarrays" aria-label="NEXT: Count_Number_of_Nice_Subarrays">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" data-tooltip="Aes_written_by_kotlin" aria-label="NEXT: Aes_written_by_kotlin">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -354,7 +422,7 @@ typedef  unsigned long size_t;</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" data-tooltip="Turn Blankspace to String" aria-label="PREVIOUS: Turn Blankspace to String">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/interview_recording_bytedance/" data-tooltip="Interview_recording_bytedance" aria-label="PREVIOUS: Interview_recording_bytedance">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -372,19 +440,19 @@ typedef  unsigned long size_t;</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/android_4_ui_controls/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/android_4_ui_controls/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/android_4_ui_controls/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -415,9 +483,9 @@ typedef  unsigned long size_t;</p>
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/02\/turn-blankspace-to-string\/';
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/android_4_ui_controls\/';
         
-          this.page.identifier = '\/2022\/02\/turn-blankspace-to-string\/'
+          this.page.identifier = '\/2022\/03\/android_4_ui_controls\/'
         
       };
       (function() {
@@ -453,7 +521,7 @@ typedef  unsigned long size_t;</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/count_number_of_nice_subarrays/" data-tooltip="Count_Number_of_Nice_Subarrays" aria-label="NEXT: Count_Number_of_Nice_Subarrays">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" data-tooltip="Aes_written_by_kotlin" aria-label="NEXT: Aes_written_by_kotlin">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -461,7 +529,7 @@ typedef  unsigned long size_t;</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" data-tooltip="Turn Blankspace to String" aria-label="PREVIOUS: Turn Blankspace to String">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/interview_recording_bytedance/" data-tooltip="Interview_recording_bytedance" aria-label="PREVIOUS: Interview_recording_bytedance">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -479,19 +547,19 @@ typedef  unsigned long size_t;</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/android_4_ui_controls/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/android_4_ui_controls/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/02/turn-blankspace-to-string/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/android_4_ui_controls/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -522,19 +590,19 @@ typedef  unsigned long size_t;</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Fturn-blankspace-to-string%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_4_ui_controls%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Fturn-blankspace-to-string%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_4_ui_controls%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F02%2Fturn-blankspace-to-string%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_4_ui_controls%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

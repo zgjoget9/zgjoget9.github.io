@@ -6,7 +6,16 @@
     <description>Recent content on Zhang Gaojie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Mar 2022 20:16:12 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Mar 2022 20:38:08 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android_6_BroadcastReceiver</title>
+      <link>https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/</link>
+      <pubDate>Sun, 27 Mar 2022 20:38:08 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/</guid>
+      <description>&lt;p&gt;BroadcastReceiver广播机制&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>default_https</title>
       <link>https://zgjoget9.github.io/2022/03/default_https/</link>
@@ -71,11 +80,11 @@
     </item>
     
     <item>
-      <title>Android_4</title>
-      <link>https://zgjoget9.github.io/2022/03/android_4/</link>
+      <title>Android_4_UI_controls</title>
+      <link>https://zgjoget9.github.io/2022/03/android_4_ui_controls/</link>
       <pubDate>Thu, 03 Mar 2022 20:13:07 +0800</pubDate>
       
-      <guid>https://zgjoget9.github.io/2022/03/android_4/</guid>
+      <guid>https://zgjoget9.github.io/2022/03/android_4_ui_controls/</guid>
       <description>&lt;p&gt;UI控件&lt;/p&gt;</description>
     </item>
     
@@ -116,11 +125,11 @@
     </item>
     
     <item>
-      <title>Android_3</title>
-      <link>https://zgjoget9.github.io/2022/02/android_3/</link>
+      <title>Android_3_Activity</title>
+      <link>https://zgjoget9.github.io/2022/02/android_3_activity/</link>
       <pubDate>Wed, 16 Feb 2022 10:06:03 +0800</pubDate>
       
-      <guid>https://zgjoget9.github.io/2022/02/android_3/</guid>
+      <guid>https://zgjoget9.github.io/2022/02/android_3_activity/</guid>
       <description>&lt;p&gt;Activity入门篇&lt;/p&gt;</description>
     </item>
     
@@ -257,38 +266,6 @@
       
       <guid>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</guid>
       <description>&lt;p&gt;2019年，我开始学习网站的搭建。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zgjoget9.github.io/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgjoget9.github.io/1/01/</guid>
-      <description>2020-06-11  从 v2ray 切换至 v2fly mtproxy 安装下线  2020-6-5  添加 ws tls Quantmumult 导入 添加 多线程编译 修复 重复添加 cron 问题  2020-6-3  添加 Nginx ipv6 监听 TLS1.3 0 RTT (merge) 适配 Nginx ipv6 监听端口修改 变更 Nginx 版本 1.16.1 更新至 1.18.0 变更 ws path 长度从固定8位变为范围随机长度  2020-2-16 1.1.0
- 修复 证书更新后未正确应用的问题 添加 旧配置文件保留 添加 安装流程 TLS 版本选择 变更 v2ray_qr_config_file位置 修复 v2ray daemon判断逻辑错误 添加 Nginx 冲突检测  2020-2-7 1.0.7</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zgjoget9.github.io/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgjoget9.github.io/1/01/</guid>
-      <description>HTTP2 over TLS 配置模板 </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zgjoget9.github.io/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgjoget9.github.io/1/01/</guid>
-      <description>V2Ray 基于 Nginx 的 vmess+ws+tls 一键安装脚本  感谢 JetBrains 提供的非商业开源软件开发授权
-  Thanks for non-commercial open source development authorization by JetBrains
- 关于 VMess MD5 认证信息 淘汰机制  自 2022 年 1 月 1 日起，服务器端将默认禁用对于 MD5 认证信息 的兼容。任何使用 MD5 认证信息的客户端将无法连接到禁用 VMess MD5 认证信息的服务器端。
- 受到影响的用户，我们强烈建议您重新安装，并设置alterid为0（默认值目前已经修改为0），不再使用 VMess MD5 认证机制 如果您不想重新安装，您可以通过使用 https://github.com/KukiSa/VMess-fAEAD-disable 强制开启对于 MD5 认证机制的兼容
-Telegram 群组  telegram 交流群:https://t.me/wulabing_v2ray telegram 更新公告频道：https://t.me/wulabing_channel  准备工作  准备一个域名，并将A记录添加好。 V2ray官方说明，了解 TLS WebSocket 及 V2ray 相关信息 安装好 wget  安装/更新方式（h2 和 ws 版本已合并） Vmess+websocket+TLS+Nginx+Website</description>
     </item>
     
   </channel>
