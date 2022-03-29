@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Android_6_BroadcastReceiver",
+  "headline": "Android_7_SQLite",
   
-  "datePublished": "2022-03-27T20:38:08+08:00",
-  "dateModified": "2022-03-27T20:38:08+08:00",
+  "datePublished": "2022-03-29T20:38:12+08:00",
+  "dateModified": "2022-03-29T20:38:12+08:00",
   "author": {
     "@type": "Person",
     "name": "Zhang Gaojie",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/android_6_broadcastreceiver\/" 
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/android_7_sqlite\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "BroadcastReceiver广播机制\n",
+  "description": "数据存储全方案\n",
   "keywords": []
 }
 
@@ -43,25 +43,25 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="BroadcastReceiver广播机制">
+<meta name="description" content="数据存储全方案">
 
 
-<meta property="og:description" content="BroadcastReceiver广播机制">
+<meta property="og:description" content="数据存储全方案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android_6_BroadcastReceiver">
-<meta name="twitter:title" content="Android_6_BroadcastReceiver">
-<meta property="og:url" content="https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/">
-<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/">
+<meta property="og:title" content="Android_7_SQLite">
+<meta name="twitter:title" content="Android_7_SQLite">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/03/android_7_sqlite/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/android_7_sqlite/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="BroadcastReceiver广播机制">
-<meta name="twitter:description" content="BroadcastReceiver广播机制">
+<meta property="og:description" content="数据存储全方案">
+<meta name="twitter:description" content="数据存储全方案">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-03-27T20:38:08">
+    <meta property="article:published_time" content="2022-03-29T20:38:12">
   
   
-    <meta property="article:modified_time" content="2022-03-27T20:38:08">
+    <meta property="article:modified_time" content="2022-03-29T20:38:12">
   
   
   
@@ -84,14 +84,14 @@
 
 
 
-    <title>Android_6_BroadcastReceiver</title>
+    <title>Android_7_SQLite</title>
 
     <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/">
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/android_7_sqlite/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -241,15 +241,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Android_6_BroadcastReceiver
+      Android_7_SQLite
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-03-27T20:38:08&#43;08:00">
+      <time datetime="2022-03-29T20:38:12&#43;08:00">
         
-  March 27, 2022
+  March 29, 2022
 
       </time>
     
@@ -260,61 +260,200 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>BroadcastReceiver广播机制</p>
-<h2 id="机制简介">机制简介</h2>
-<p>广播类型：标准广播和有序广播</p>
+              <p>数据存储全方案</p>
+<h2 id="持久化技术">持久化技术</h2>
+<p>文件存储、SharedPreferences存储、数据库存储</p>
+<h2 id="文件存储">文件存储</h2>
+<p>对存储内容不做任何格式化处理，适合存储简单文本数据或者二进制数据</p>
+<p>openFileOutput()</p>
+<p>Context类中提供了一个openFileOutput()方法，可以用于将数据存储到指定的文件中。</p>
+<p>所有的文件会默认存储到/data/data/ &lt; package name &gt; /files/目录下。示例写法如下：</p>
+<pre tabindex="0"><code>fun save(inputText: String) {
+    try {
+        val output = openFileOutput(&quot;data&quot;, Context.MODE_PRIVATE)
+        val writer = BufferedWriter(OutputStreamWriter(output))
+        writer.use {
+            it.write(inputText)
+        }
+    } catch (e: IOException) {
+        e.printStackTrace()
+    }
+}
+</code></pre><p>Context类中还提供了一个openFileInput()方法，用于从文件中读取数据。</p>
+<p>它会自动到/data/data/<!-- raw HTML omitted -->/files/目录下加载文件，并返回一个FileInputStream对象，得到这个对象之后，再通过流的方式就可以将数据读取出来了。示例写法如下：</p>
+<pre tabindex="0"><code>fun load(): String {
+    val content = StringBuilder()
+    try {
+        val input = openFileInput(&quot;data&quot;)
+        val reader = BufferedReader(InputStreamReader(input))
+        reader.use {
+            reader.forEachLine {
+                content.append(it)
+            }
+        }
+    } catch (e: IOException) {
+        e.printStackTrace()
+    }
+    return content.toString()
+}
+</code></pre><h2 id="sharedpreferences存储">SharedPreferences存储</h2>
+<p>不同于文件的存储方式，SharedPreferences是使用键值对的方式来存储数据的。</p>
+<p>也就是说，当保存一条数据的时候，需要给这条数据提供一个对应的键，这样在读取数据的时候就可以通过这个键把相应的值取出来。</p>
+<p>SharedPreferences还支持多种不同的数据类型存储，如果存储的数据类型是整型，那么读取出来的数据也是整型的；如果存储的数据是一个字符串，那么读取出来的数据仍然是字符串。</p>
+<p>向SharedPreferences文件中存储数据，主要可以分为3步实现。</p>
 <ul>
 <li>
-<p>标准广播
-完全异步执行的广播，广播发出之后，所有的BroadcastReceiver几乎在同一时刻收到广播消息，他们之间没有任何先后顺序，这种广播效率非常高，但无法被截断。</p>
+<p>调用SharedPreferences对象的edit()方法获取一个SharedPreferences.Editor对象。</p>
 </li>
 <li>
-<p>有序广播
-同步执行的广播，同一时刻只有一个BroadcastReceiver能收到这条消息，优先级高的先接收到。</p>
+<p>向SharedPreferences.Editor对象中添加数据，比如添加一个布尔型数据就使用putBoolean()方法，添加一个字符串则使用putString()方法，以此类推。</p>
+</li>
+<li>
+<p>调用apply()方法将添加的数据提交，从而完成数据存储操作。</p>
 </li>
 </ul>
-<h2 id="接受系统广播">接受系统广播</h2>
-<ul>
-<li>
-<p>以TimeChangeReceiver为例</p>
-</li>
-<li>
-<p>静态注册实现开机启动</p>
-<p>android 8之后所有隐式广播都不允许使用静态注册的方式接受。</p>
-<p>开机广播：android.intent.action.BOOT_COMPLETED(这里不知道avd怎么reboot,书上方法已失效)</p>
-</li>
-</ul>
-<h2 id="发送自定义广播">发送自定义广播</h2>
-<ul>
-<li>
-<p>发送标准广播</p>
-<p>MyBroadcastReceiver</p>
-</li>
-<li>
-<p>发送有序广播
-sendOrderBroadcast(intent,null)
-abortBroadcast()</p>
-</li>
-</ul>
-<h2 id="broadcast实践实现强制下线">Broadcast实践,实现强制下线</h2>
-<h2 id="kotlin-高阶函数">Kotlin: 高阶函数</h2>
-<p>定义自己的函数式api，借助高阶函数实现</p>
-<ul>
-<li>定义
-接受另一个函数作为参数，或者返回值类型时另一个函数的函数。</li>
-</ul>
-<h3 id="函数类型">函数类型</h3>
-<p>(String, Int) -&gt; Unit</p>
-<h3 id="lambda表达式">lambda表达式</h3>
-<h2 id="内联函数inline">内联函数inline</h2>
-<p>kotlin代码最终也是编译成java字节码，但是java没有高阶函数的概念</p>
-<p>把函数参数转换为一个function接口，里面有个待实现的invoke函数</p>
-<p>在调用高阶函数时，lambda表达式标称function接口的匿名类实现，然后再invoke函数中实现函数参数的逻辑，将结果返回。所以每调用一次lambda表达式都会创建一个匿名类实例，造成额外内存和性能开销</p>
-<p>为了解决上述问题，kotlin提供内联函数，它可以将lambda表达式带来的开销完全消除</p>
-<p>用法简单，同c++，在高阶函数前加inline关键字</p>
-<h2 id="noinline-和-crossinline">noinline 和 crossinline</h2>
-<p>对于多个函数参数而不想全都内联，可以对不想内联的函数使用noinline</p>
-<h2 id="git">Git</h2>
+<p>实例写法：</p>
+<pre tabindex="0"><code>val editor = getSharedPreferences(&quot;data&quot;, Context.MODE_PRIVATE).edit()
+editor.putString(&quot;name&quot;, &quot;Tom&quot;)
+editor.putInt(&quot;age&quot;, 28)
+editor.putBoolean(&quot;married&quot;, false)
+editor.apply()
+</code></pre><p>SharedPreferences对象中提供了一系列的get方法，用于对存储的数据进行读取，每种get方法都对应了SharedPreferences.Editor中的一种put方法。
+比如读取一个布尔型数据就使用getBoolean()方法，读取一个字符串就使用getString()方法。</p>
+<p>示例写法如下：</p>
+<pre tabindex="0"><code>val prefs = getSharedPreferences(&quot;data&quot;, Context.MODE_PRIVATE)
+val name = prefs.getString(&quot;name&quot;, &quot;&quot;)
+val age = prefs.getInt(&quot;age&quot;, 0)
+val married = prefs.getBoolean(&quot;married&quot;, false)
+</code></pre><h2 id="sqlite存储">SQLite存储</h2>
+<p>SQLite是一款轻量级的关系型数据库，它的运算速度非常快，占用资源很少，通常只需要几百KB的内存就足够了，因而特别适合在移动设备上使用。</p>
+<p>SQLite不仅支持标准的SQL语法，还遵循了数据库的ACID事务，所以只要你以前使用过其他的关系型数据库，就可以很快地上手SQLite。而SQLite又比一般的数据库要简单得多，它甚至不用设置用户名和密码就可以使用。</p>
+<p>Android正是把这个功能极为强大的数据库嵌入到了系统当中，使得本地持久化的功能有了一次质的飞跃。</p>
+<h2 id="sqlite实践">SQLite实践</h2>
+<h3 id="创建数据库">创建数据库</h3>
+<p>Android为了让我们能够更加方便地管理数据库，专门提供了一个SQLiteOpenHelper帮助类，借助这个类可以非常简单地对数据库进行创建和升级。示例写法如下：</p>
+<pre tabindex="0"><code>class MyDatabaseHelper(val context: Context, name: String, version: Int) : SQLiteOpenHelper(context, name, null, version) {
+
+    private val createBook = &quot;create table Book (&quot; +
+            &quot;id integer primary key autoincrement,&quot; +
+            &quot;author text,&quot; +
+            &quot;price real,&quot; +
+            &quot;pages integer,&quot; +
+            &quot;name text)&quot;
+
+    override fun onCreate(db: SQLiteDatabase) {
+        db.execSQL(createBook)
+        Toast.makeText(context, &quot;Create succeeded&quot;, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+    }
+
+}
+</code></pre><h3 id="升级数据库">升级数据库</h3>
+<p>onUpgrade()方法是用于对数据库进行升级的，它在整个数据库的管理工作当中起着非常重要的作用。示例写法如下：</p>
+<pre tabindex="0"><code>class MyDatabaseHelper(val context: Context, name: String, version: Int) : SQLiteOpenHelper(context, name, null, version) {
+    …
+    private val createCategory = &quot;create table Category (&quot; +
+            &quot;id integer primary key autoincrement,&quot; +
+            &quot;category_name text,&quot; +
+            &quot;category_code integer)&quot;
+
+    override fun onCreate(db: SQLiteDatabase) {
+        db.execSQL(createBook)
+        db.execSQL(createCategory)
+        Toast.makeText(context, &quot;Create succeeded&quot;, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        db.execSQL(&quot;drop table if exists Book&quot;)
+        db.execSQL(&quot;drop table if exists Category&quot;)
+        onCreate(db)
+    }
+
+}
+</code></pre><h3 id="添加数据">添加数据</h3>
+<p>SQLiteDatabase中提供了一个insert()方法，专门用于添加数据。它接收3个参数：</p>
+<p>第一个参数是表名，我们希望向哪张表里添加数据，这里就传入该表的名字；第二个参数用于在未指定添加数据的情况下给某些可为空的列自动赋值NULL，一般我们用不到这个功能，直接传入null即可；第三个参数是一个ContentValues对象，它提供了一系列的put()方法重载，用于向ContentValues中添加数据，只需要将表中的每个列名以及相应的待添加数据传入即可。</p>
+<p>示例写法如下：</p>
+<pre tabindex="0"><code>val dbHelper = MyDatabaseHelper(this, &quot;BookStore.db&quot;, 2)
+val db = dbHelper.writableDatabase
+val values1 = ContentValues().apply {
+    // 开始组装第一条数据
+    put(&quot;name&quot;, &quot;The Da Vinci Code&quot;)
+    put(&quot;author&quot;, &quot;Dan Brown&quot;)
+    put(&quot;pages&quot;, 454)
+    put(&quot;price&quot;, 16.96)
+}
+db.insert(&quot;Book&quot;, null, values1) // 插入一条数据
+</code></pre><h3 id="更新数据">更新数据</h3>
+<p>SQLiteDatabase中提供了一个非常好用的update()方法，用于对数据进行更新。</p>
+<p>这个方法接收4个参数：第一个参数和insert()方法一样，也是表名，指定更新哪张表里的数据；第二个参数是ContentValues对象，要把更新数据在这里组装进去；第三、第四个参数用于约束更新某一行或某几行中的数据，不指定的话默认会更新所有行。</p>
+<p>示例写法如下：</p>
+<pre tabindex="0"><code>val dbHelper = MyDatabaseHelper(this, &quot;BookStore.db&quot;, 2)            
+val db = dbHelper.writableDatabase
+val values = ContentValues()
+values.put(&quot;price&quot;, 10.99)
+db.update(&quot;Book&quot;, values, &quot;name = ?&quot;, arrayOf(&quot;The Da Vinci Code&quot;))
+</code></pre><h3 id="删除数据">删除数据</h3>
+<p>SQLiteDatabase中提供了一个delete()方法，专门用于删除数据。</p>
+<p>这个方法接收3个参数：第一个参数仍然是表名，这个没什么好说的；第二、第三个参数用于约束删除某一行或某几行的数据，不指定的话默认会删除所有行。</p>
+<p>示例写法如下：</p>
+<pre tabindex="0"><code>val dbHelper = MyDatabaseHelper(this, &quot;BookStore.db&quot;, 2)
+val db = dbHelper.writableDatabase
+db.delete(&quot;Book&quot;, &quot;pages &gt; ?&quot;, arrayOf(&quot;500&quot;))
+</code></pre><h3 id="查询数据">查询数据</h3>
+<p>SQLiteDatabase中还提供了一个query()方法用于对数据进行查询。这个方法的参数非常复杂，最短的一个方法重载也需要传入7个参数。参数的详细解释见下表：
+<img src="https://zgjoget9.github.io/img/android_7_1.png" alt="pic1"></p>
+<p>查询Book表中所有数据的示例写法：</p>
+<pre tabindex="0"><code>val dbHelper = MyDatabaseHelper(this, &quot;BookStore.db&quot;, 2)
+val db = dbHelper.writableDatabase
+// 查询Book表中所有的数据
+val cursor = db.query(&quot;Book&quot;, null, null, null, null, null, null)
+if (cursor.moveToFirst()) {
+    do {
+        // 遍历Cursor对象，取出数据并打印
+        val name = cursor.getString(cursor.getColumnIndex(&quot;name&quot;))
+        val author = cursor.getString(cursor.getColumnIndex(&quot;author&quot;))
+        val pages = cursor.getInt(cursor.getColumnIndex(&quot;pages&quot;))
+        val price = cursor.getDouble(cursor.getColumnIndex(&quot;price&quot;))
+        Log.d(&quot;MainActivity&quot;, &quot;book name is $name&quot;)
+        Log.d(&quot;MainActivity&quot;, &quot;book author is $author&quot;)
+        Log.d(&quot;MainActivity&quot;, &quot;book pages is $pages&quot;)
+        Log.d(&quot;MainActivity&quot;, &quot;book price is $price&quot;)
+    } while (cursor.moveToNext())
+}
+cursor.close()
+</code></pre><h3 id="使用sql操作数据库">使用sql操作数据库</h3>
+<p>添加数据的方法如下：</p>
+<pre tabindex="0"><code>db.execSQL(
+    “insert into Book (name, author, pages, price) values(?, ?, ?, ?)”, arrayOf(&quot;The Da Vinci Code&quot;, &quot;Dan Brown&quot;, &quot;454&quot;, &quot;16.96&quot;)
+)
+</code></pre><p>更新数据的方法如下：</p>
+<pre tabindex="0"><code>db.execSQL(&quot;update Book set price = ? where name = ?&quot;, arrayOf(&quot;10.99&quot;, &quot;The Da Vinci Code&quot;))
+</code></pre><p>删除数据的方法如下：</p>
+<pre tabindex="0"><code>db.execSQL(&quot;delete from Book where pages &gt; ?&quot;, arrayOf(&quot;500&quot;))
+</code></pre><p>查询数据的方法如下：</p>
+<pre tabindex="0"><code>val cursor = db.rawQuery(&quot;select * from Book&quot;, null)
+</code></pre><h2 id="kotlin-高阶函数应用">Kotlin: 高阶函数应用</h2>
+<h3 id="简化sharedpreferences">简化SharedPreferences</h3>
+<p>我们可以使用高阶函数简化SharedPreferences的用法，如下所示：</p>
+<pre tabindex="0"><code>fun SharedPreferences.open(block: SharedPreferences.Editor.() -&gt; Unit) {
+    val editor = edit()
+    editor.block()
+    editor.apply()
+}
+</code></pre><p>定义好了open函数之后，以后在项目中使用SharedPreferences存储数据就会更加方便了，写法如下：</p>
+<pre tabindex="0"><code>getSharedPreferences(&quot;data&quot;, Context.MODE_PRIVATE).open {
+    putString(&quot;name&quot;, &quot;Tom&quot;)
+    putInt(&quot;age&quot;, 28)
+    putBoolean(&quot;married&quot;, false)
+}
+</code></pre><h3 id="简化contentvalues">简化ContentValues</h3>
+<p>然后就可以使用如下的写法来简单创建ContentValues对象了：</p>
+<pre tabindex="0"><code>val values = cvOf(&quot;name&quot; to &quot;Game of Thrones&quot;, &quot;author&quot; to &quot;George Martin&quot;, &quot;pages&quot; to 720, &quot;price&quot; to 20.85)
+db.insert(&quot;Book&quot;, null, values)
+</code></pre>
               
 
 
@@ -331,7 +470,7 @@ abortBroadcast()</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/android_7_sqlite/" data-tooltip="Android_7_SQLite" aria-label="NEXT: Android_7_SQLite">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -339,7 +478,7 @@ abortBroadcast()</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/default_https/" data-tooltip="default_https" aria-label="PREVIOUS: default_https">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" data-tooltip="Android_6_BroadcastReceiver" aria-label="PREVIOUS: Android_6_BroadcastReceiver">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -357,19 +496,19 @@ abortBroadcast()</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/android_7_sqlite/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/android_7_sqlite/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/android_7_sqlite/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -400,9 +539,9 @@ abortBroadcast()</p>
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/android_6_broadcastreceiver\/';
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/android_7_sqlite\/';
         
-          this.page.identifier = '\/2022\/03\/android_6_broadcastreceiver\/'
+          this.page.identifier = '\/2022\/03\/android_7_sqlite\/'
         
       };
       (function() {
@@ -438,7 +577,7 @@ abortBroadcast()</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/android_7_sqlite/" data-tooltip="Android_7_SQLite" aria-label="NEXT: Android_7_SQLite">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -446,7 +585,7 @@ abortBroadcast()</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/default_https/" data-tooltip="default_https" aria-label="PREVIOUS: default_https">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" data-tooltip="Android_6_BroadcastReceiver" aria-label="PREVIOUS: Android_6_BroadcastReceiver">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -464,19 +603,19 @@ abortBroadcast()</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/android_7_sqlite/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/android_7_sqlite/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/android_6_broadcastreceiver/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/android_7_sqlite/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -507,19 +646,19 @@ abortBroadcast()</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_6_broadcastreceiver%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_7_sqlite%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_6_broadcastreceiver%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_7_sqlite%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_6_broadcastreceiver%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fandroid_7_sqlite%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
