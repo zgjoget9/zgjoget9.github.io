@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Zhang Gaojie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Mar 2022 20:38:12 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Mar 2022 20:38:15 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android_8_ContentProvider</title>
+      <link>https://zgjoget9.github.io/2022/03/android_8_contentprovider/</link>
+      <pubDate>Wed, 30 Mar 2022 20:38:15 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/03/android_8_contentprovider/</guid>
+      <description>&lt;p&gt;ContentProvider跨程序共享数据&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Android_7_SQLite</title>
       <link>https://zgjoget9.github.io/2022/03/android_7_sqlite/</link>
