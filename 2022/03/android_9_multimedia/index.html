@@ -261,9 +261,239 @@
           <div class="post-content markdown">
             <div class="main-content-wrap">
               <p>多媒体技术</p>
-<h3 id="通知">通知</h3>
-<h3 id="heading"></h3>
-<h3 id="heading-1"></h3>
+<h2 id="通知">通知</h2>
+<p>通知是Android系统中比较有特色的一个功能，当某个应用程序希望向用户发出一些提示信息，而该应用程序又不在前台运行时，就可以借助通知来实现。发出一条通知后，手机最上方的状态栏中会显示一个通知的图标，下拉状态栏后可以看到通知的详细内容。</p>
+<h3 id="通知渠道">通知渠道</h3>
+<p>Android 8.0系统引入了通知渠道这个概念。</p>
+<p>通知渠道，顾名思义，就是每条通知都要属于一个对应的渠道。每个应用程序都可以自由地创建当前应用拥有哪些通知渠道，但是这些通知渠道的控制权是掌握在用户手上的。用户可以自由地选择这些通知渠道的重要程度，是否响铃、是否振动或者是否要关闭这个渠道的通知。</p>
+<p>对于每个应用来说，通知渠道的划分是非常考究的，因为通知渠道一旦创建之后就不能再修改了，因此开发者需要仔细分析自己的应用程序一共有哪些类型的通知，然后再去创建相应的通知渠道。</p>
+<p>我们可以参考Twitter的通知渠道划分，如右图所示。</p>
+<p><img src="https://zgjoget9.github.io/img/content_provider_1.png" alt="pic1"></p>
+<h3 id="创建通知渠道">创建通知渠道</h3>
+<p>创建一个通知渠道至少需要渠道ID、渠道名称以及重要等级这3个参数，其中渠道ID可以随便定义，只要保证全局唯一性就可以。</p>
+<p>渠道名称是给用户看的，需要可以清楚地表达这个渠道的用途。</p>
+<p>通知的重要等级主要有IMPORTANCE_HIGH、IMPORTANCE_DEFAULT、IMPORTANCE_LOW、IMPORTANCE_MIN这几种，对应的重要程度依次从高到低，不同的重要等级会决定通知的不同行为。</p>
+<p>示例代码如下所示：</p>
+<pre tabindex="0"><code>if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.O) {
+    val channel = NotificationChannel(channelId, channelName, importance)
+    manager.createNotificationChannel(channel)
+}
+
+</code></pre><h3 id="通知的基本用法">通知的基本用法</h3>
+<p>想要让手机弹出一条通知，只需要使用如下代码：</p>
+<pre tabindex="0"><code>val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+val notification = NotificationCompat.Builder(context, channelId)
+        .setContentTitle(&quot;This is content title&quot;)
+        .setContentText(&quot;This is content text&quot;)
+        .setSmallIcon(R.drawable.small_icon)
+        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.large_icon))
+        .build()
+manager.notify(1, notification)
+</code></pre><p>想要指定通知的点击事件，只需要使用如下代码：</p>
+<pre tabindex="0"><code>val intent = Intent(this, NotificationActivity::class.java)
+val pi = PendingIntent.getActivity(this, 0, intent, 0)
+val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+val notification = NotificationCompat.Builder(context, channelId)
+        .setContentTitle(&quot;This is content title&quot;)
+        .setContentText(&quot;This is content text&quot;)
+        .setSmallIcon(R.drawable.small_icon)
+        .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.drawable.large_icon))
+        .setContentIntent(pi)
+        .build()
+manager.notify(1, notification)
+</code></pre><h3 id="显示长文字的通知">显示长文字的通知</h3>
+<p>使用setStyle()方法替代setContentText()方法，并在setStyle()方法中创建一个NotificationCompat.BigTextStyle对象，这个对象就是用于封装长文字信息的，
+只要调用它的bigText()方法并将文字内容传入就可以了。</p>
+<pre tabindex="0"><code>val notification = NotificationCompat.Builder(this, &quot;normal&quot;)
+        ...
+        .setStyle(NotificationCompat.BigTextStyle().bigText(&quot;Learn how to build notifications, send and sync  data, and use voice actions. Get the official Android IDE and developer tools to build apps for Android.&quot;))
+       .build()
+</code></pre><h3 id="显示大图片的通知">显示大图片的通知</h3>
+<p>仍然调用的setStyle()方法，在参数中创建一个NotificationCompat.BigPictureStyle对象，这个对象就是用于设置大图片的，然后调用它的bigPicture()方法并将图片传入即可。</p>
+<pre tabindex="0"><code>val notification = NotificationCompat.Builder(this, &quot;normal&quot;)
+        ...
+        .setStyle(NotificationCompat.BigPictureStyle().bigPicture(
+		BitmapFactory.decodeResource(resources, R.drawable.big_image)))
+        .build()
+</code></pre><h2 id="调用摄像头和相册">调用摄像头和相册</h2>
+<h3 id="调用摄像头拍照">调用摄像头拍照</h3>
+<p>虽然Android赋予我们了在应用程序中打开摄像头拍照的能力，但是通常情况下并没有必要这么做，因为我们可以直接打开系统的相机程序进行拍照，然后获取返回的图片即可。示例代码如下：</p>
+<pre tabindex="0"><code>class MainActivity : AppCompatActivity() {
+    lateinit var imageUri: Uri
+    lateinit var outputImage: File
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        outputImage = File(externalCacheDir, &quot;output_image.jpg&quot;)
+        if (outputImage.exists()) {
+            outputImage.delete()
+        }
+        outputImage.createNewFile()
+        imageUri = if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) {
+            FileProvider.getUriForFile(this, &quot;com.example.cameraalbumtest.fileprovider&quot;, outputImage)
+        } else {
+            Uri.fromFile(outputImage)
+        }
+        val intent = Intent(&quot;android.media.action.IMAGE_CAPTURE&quot;)
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
+        startActivityForResult(intent, takePhoto)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            takePhoto -&gt; {
+                if (resultCode == Activity.RESULT_OK) {val bitmap = BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri))
+                    imageView.setImageBitmap( bitmap)
+                }
+            }
+        }
+    }
+    ...
+}
+</code></pre><p>从Android 7.0系统开始，直接使用本地真实路径的Uri被认为是不安全的，会抛出一个FileUriExposedException异常。而FileProvider则是一种特殊的ContentProvider，它可以选择性地将封装过的Uri共享给外部，从而提高了应用的安全性。</p>
+<p>为此我们需要再额外配置一个Uri的共享路径，右击res目录→New→Directory，创建一个xml目录，接着右击xml目录→New→File，创建一个file_paths.xml文件。然后修改file_paths.xml文件中的内容，如下所示：</p>
+<pre tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;paths xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;external-path name=&quot;my_images&quot; path=&quot;/&quot; /&gt;
+&lt;/paths&gt;
+</code></pre><p>然后在AndroidManifest中对FileProvider进行注册即可：</p>
+<pre tabindex="0"><code>&lt;provider
+    android:name=&quot;androidx.core.content.FileProvider&quot;
+    android:authorities=&quot;com.example.cameraalbumtest.fileprovider&quot;
+    android:exported=&quot;false&quot;
+    android:grantUriPermissions=&quot;true&quot;&gt;
+    &lt;meta-data
+        android:name=&quot;android.support.FILE_PROVIDER_PATHS&quot;
+        android:resource=&quot;@xml/file_paths&quot; /&gt;
+&lt;/provider&gt;
+</code></pre><p>现在就可以打开相机进行拍照了，最终的运行结果如下图所示。</p>
+<p>！<a href="https://zgjoget9.github.io/img/content_provider_2.png">pic2</a></p>
+<h3 id="从相册中选择图片">从相册中选择图片</h3>
+<p>虽然调用摄像头拍照既方便又快捷，但我们并不是每次都需要当场拍一张照片的。因为每个人的手机相册里应该都会存有许多张图片，直接从相册里选取一张现有的图片会比打开相机拍一张照片更加常用。示例代码如下：</p>
+<pre tabindex="0"><code>class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intent.addCategory(Intent.CATEGORY_OPENABLE) 
+        intent.type = &quot;image/*&quot;
+        startActivityForResult(intent, fromAlbum)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            fromAlbum -&gt; {
+                if (resultCode == Activity.RESULT_OK &amp;&amp; data != null) {
+                    data.data?.let { uri -&gt;
+                        val bitmap = getBitmapFromUri(uri)
+                        imageView.setImageBitmap(bitmap)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getBitmapFromUri(uri: Uri) = contentResolver.openFileDescriptor(uri, &quot;r&quot;)?.use {
+        BitmapFactory.decodeFileDescriptor(it.fileDescriptor)
+    }
+    …
+}
+</code></pre><h2 id="播放多媒体文件">播放多媒体文件</h2>
+<h3 id="播放音频">播放音频</h3>
+<p>手机上最常见的休闲方式毫无疑问就是听音乐和看电影了，随着移动设备的普及，越来越多的人可以随时享受优美的音乐，观看精彩的电影。Android在播放音频和视频方面做了相当不错的支持，它提供了一套较为完整的API，使得开发者可以很轻松地编写出一个简易的音频或视频播放器。</p>
+<p>在Android中播放音频文件一般都是使用MediaPlayer类实现的，它对多种格式的音频文件提供了非常全面的控制方法，从而使播放音乐的工作变得十分简单。下表列出了MediaPlayer类中一些较为常用的控制方法。</p>
+<p><img src="https://zgjoget9.github.io/img/content_provider_3.png" alt="pic3"></p>
+<p>一个简单的音乐播放器示例代码如下：</p>
+<pre tabindex="0"><code>class MainActivity : AppCompatActivity() {
+
+    private val mediaPlayer = MediaPlayer()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        initMediaPlayer()
+        play.setOnClickListener {
+            if (!mediaPlayer.isPlaying) {
+                mediaPlayer.start() // 开始播放
+            }
+        }
+        pause.setOnClickListener {
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.pause() // 暂停播放
+            }
+        }
+        stop.setOnClickListener {
+            if (mediaPlayer.isPlaying) {
+                mediaPlayer.reset() // 停止播放
+                initMediaPlayer()
+            }
+        }
+    }
+
+    private fun initMediaPlayer() {
+        val assetManager = assets
+        val fd = assetManager.openFd(&quot;music.mp3&quot;)
+        mediaPlayer.setDataSource(fd.fileDescriptor, fd.startOffset, fd.length) 
+        mediaPlayer.prepare()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.stop()
+        mediaPlayer.release()
+    }
+
+}
+</code></pre><h3 id="播放视频">播放视频</h3>
+<p>播放视频文件其实并不比播放音频文件复杂，主要是使用VideoView类来实现的。这个类将视频的显示和控制集于一身，我们仅仅借助它就可以完成一个简易的视频播放器。VideoView的用法和MediaPlayer也比较类似，下表列出了MediaPlayer类中一些较为常用的控制方法。</p>
+<p><img src="https://zgjoget9.github.io/img/content_provider_4.png" alt="pic4"></p>
+<p>一个简单的视频播放器示例代码如下：</p>
+<pre tabindex="0"><code>class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        val uri = Uri.parse(&quot;android.resource://$packageName/${R.raw.video}&quot;)
+        videoView.setVideoURI(uri)
+        play.setOnClickListener {
+            if (!videoView.isPlaying) {
+                videoView.start() // 开始播放
+            }
+        }
+        pause.setOnClickListener {
+            if (videoView.isPlaying) {
+                videoView.pause() // 暂停播放
+            }
+        }
+        replay.setOnClickListener {
+            if (videoView.isPlaying) {
+                videoView.resume() // 重新播放
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        videoView.suspend()
+    }
+
+}
+</code></pre><h2 id="kotlin使用infix函数构建更可读的语法">kotlin:使用infix函数构建更可读的语法</h2>
+<p>借助infix函数，我们可以使用一种更具可读性的语法来表达一段代码。</p>
+<pre tabindex="0"><code>infix fun String.beginsWith(prefix: String) = startsWith(prefix)
+</code></pre><p>这里给String类添加了一个beginsWith()函数，它用于判断一个字符串是否是以某个指定参数开头。而加上了infix关键字之后，beginsWith()函数就变成了一个infix函数，这样除了传统的函数调用方式之外，我们还可以用一种特殊的语法糖格式调用beginsWith()函数，如下所示：</p>
+<pre tabindex="0"><code>if (&quot;Hello Kotlin&quot; beginsWith &quot;Hello&quot;) {
+    // 处理具体的逻辑
+}
+</code></pre><p>我们还可以给Collection接口添加一个扩展函数：</p>
+<pre tabindex="0"><code>infix fun &lt;T&gt; Collection&lt;T&gt;.has(element: T) = contains(element)
+</code></pre><p>现在我们就可以使用如下的语法来判断集合中是否包括某个指定的元素：</p>
+<pre tabindex="0"><code>val list = listOf(&quot;Apple&quot;, &quot;Banana&quot;, &quot;Orange&quot;, &quot;Pear&quot;, &quot;Grape&quot;)
+if (list has &quot;Banana&quot;) {
+    // 处理具体的逻辑
+}
+</code></pre>
               
 
 
@@ -280,7 +510,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/04/android_10_service/" data-tooltip="Android_10_service" aria-label="NEXT: Android_10_service">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -387,7 +617,7 @@
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--disabled">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/04/android_10_service/" data-tooltip="Android_10_service" aria-label="NEXT: Android_10_service">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
