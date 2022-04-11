@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Aes_written_by_kotlin",
+  "headline": "BroadcastReceiver",
   
-  "datePublished": "2022-03-04T02:46:35+08:00",
-  "dateModified": "2022-03-04T02:46:35+08:00",
+  "datePublished": "2022-03-27T20:38:08+08:00",
+  "dateModified": "2022-03-27T20:38:08+08:00",
   "author": {
     "@type": "Person",
     "name": "Zhang Gaojie",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/aes_written_by_kotlin\/" 
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/broadcastreceiver\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "AES加密解密\n",
+  "description": "BroadcastReceiver广播机制\n",
   "keywords": []
 }
 
@@ -43,25 +43,25 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="AES加密解密">
+<meta name="description" content="BroadcastReceiver广播机制">
 
 
-<meta property="og:description" content="AES加密解密">
+<meta property="og:description" content="BroadcastReceiver广播机制">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Aes_written_by_kotlin">
-<meta name="twitter:title" content="Aes_written_by_kotlin">
-<meta property="og:url" content="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/">
-<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/">
+<meta property="og:title" content="BroadcastReceiver">
+<meta name="twitter:title" content="BroadcastReceiver">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/03/broadcastreceiver/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/broadcastreceiver/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="AES加密解密">
-<meta name="twitter:description" content="AES加密解密">
+<meta property="og:description" content="BroadcastReceiver广播机制">
+<meta name="twitter:description" content="BroadcastReceiver广播机制">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-03-04T02:46:35">
+    <meta property="article:published_time" content="2022-03-27T20:38:08">
   
   
-    <meta property="article:modified_time" content="2022-03-04T02:46:35">
+    <meta property="article:modified_time" content="2022-03-27T20:38:08">
   
   
   
@@ -84,14 +84,14 @@
 
 
 
-    <title>Aes_written_by_kotlin</title>
+    <title>BroadcastReceiver</title>
 
     <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/">
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/broadcastreceiver/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -241,15 +241,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Aes_written_by_kotlin
+      BroadcastReceiver
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-03-04T02:46:35&#43;08:00">
+      <time datetime="2022-03-27T20:38:08&#43;08:00">
         
-  March 4, 2022
+  March 27, 2022
 
       </time>
     
@@ -260,56 +260,61 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>AES加密解密</p>
-<pre tabindex="0"><code>object AESCrypt{
-
-    //AES加密
-    fun encrypt(input:String,password:String): String{
-
-        //初始化cipher对象
-        val cipher = Cipher.getInstance(&quot;AES&quot;)
-        // 生成密钥
-        val keySpec:SecretKeySpec? = SecretKeySpec(password.toByteArray(),&quot;AES&quot;)
-        cipher.init(Cipher.ENCRYPT_MODE,keySpec)
-        //加密解密
-        val encrypt = cipher.doFinal(input.toByteArray())
-        val result = Base64.getEncoder().encode(encrypt)
-
-        return String(result)
-    }
-
-    //AES解密
-    fun decrypt(input: String,password: String): String{
-
-        //初始化cipher对象
-        val cipher = Cipher.getInstance(&quot;AES&quot;)
-        // 生成密钥
-        val keySpec:SecretKeySpec? = SecretKeySpec(password.toByteArray(),&quot;AES&quot;)
-        cipher.init(Cipher.DECRYPT_MODE,keySpec)
-        //加密解密
-        val encrypt = cipher.doFinal(Base64.getDecoder().decode(input.toByteArray()))
-        //AES解密不需要用Base64解码
-        val result = String(encrypt)
-
-        return result
-    }
-
-}
-
-fun main(args: Array&lt;String&gt;) {
-
-    //一个英文字节占8bit,AES需要128bit，也就是需要16位长度
-    val password = &quot;1234567887654321&quot;//密钥
-    val input = &quot;AES加密解密测试&quot;
-
-    val encrypt = AESCrypt.encrypt(input, password)
-    val decrypt = AESCrypt.decrypt(encrypt, password)
-
-    println(&quot;AES加密结果:&quot;+encrypt)
-    println(&quot;AES解密结果:&quot;+decrypt)
-
-}
-</code></pre>
+              <p>BroadcastReceiver广播机制</p>
+<h2 id="机制简介">机制简介</h2>
+<p>广播类型：标准广播和有序广播</p>
+<ul>
+<li>
+<p>标准广播
+完全异步执行的广播，广播发出之后，所有的BroadcastReceiver几乎在同一时刻收到广播消息，他们之间没有任何先后顺序，这种广播效率非常高，但无法被截断。</p>
+</li>
+<li>
+<p>有序广播
+同步执行的广播，同一时刻只有一个BroadcastReceiver能收到这条消息，优先级高的先接收到。</p>
+</li>
+</ul>
+<h2 id="接受系统广播">接受系统广播</h2>
+<ul>
+<li>
+<p>以TimeChangeReceiver为例</p>
+</li>
+<li>
+<p>静态注册实现开机启动</p>
+<p>android 8之后所有隐式广播都不允许使用静态注册的方式接受。</p>
+<p>开机广播：android.intent.action.BOOT_COMPLETED(这里不知道avd怎么reboot,书上方法已失效)</p>
+</li>
+</ul>
+<h2 id="发送自定义广播">发送自定义广播</h2>
+<ul>
+<li>
+<p>发送标准广播</p>
+<p>MyBroadcastReceiver</p>
+</li>
+<li>
+<p>发送有序广播
+sendOrderBroadcast(intent,null)
+abortBroadcast()</p>
+</li>
+</ul>
+<h2 id="broadcast实践实现强制下线">Broadcast实践,实现强制下线</h2>
+<h2 id="kotlin-高阶函数">Kotlin: 高阶函数</h2>
+<p>定义自己的函数式api，借助高阶函数实现</p>
+<ul>
+<li>定义
+接受另一个函数作为参数，或者返回值类型时另一个函数的函数。</li>
+</ul>
+<h3 id="函数类型">函数类型</h3>
+<p>(String, Int) -&gt; Unit</p>
+<h3 id="lambda表达式">lambda表达式</h3>
+<h2 id="内联函数inline">内联函数inline</h2>
+<p>kotlin代码最终也是编译成java字节码，但是java没有高阶函数的概念</p>
+<p>把函数参数转换为一个function接口，里面有个待实现的invoke函数</p>
+<p>在调用高阶函数时，lambda表达式标称function接口的匿名类实现，然后再invoke函数中实现函数参数的逻辑，将结果返回。所以每调用一次lambda表达式都会创建一个匿名类实例，造成额外内存和性能开销</p>
+<p>为了解决上述问题，kotlin提供内联函数，它可以将lambda表达式带来的开销完全消除</p>
+<p>用法简单，同c++，在高阶函数前加inline关键字</p>
+<h2 id="noinline-和-crossinline">noinline 和 crossinline</h2>
+<p>对于多个函数参数而不想全都内联，可以对不想内联的函数使用noinline</p>
+<h2 id="git">Git</h2>
               
 
 
@@ -326,7 +331,7 @@ fun main(args: Array&lt;String&gt;) {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/auto_tasks/" data-tooltip="Auto_tasks" aria-label="NEXT: Auto_tasks">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/sqlite/" data-tooltip="SQLite" aria-label="NEXT: SQLite">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -334,7 +339,7 @@ fun main(args: Array&lt;String&gt;) {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/ui_controls/" data-tooltip="UI_controls" aria-label="PREVIOUS: UI_controls">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/default_https/" data-tooltip="default_https" aria-label="PREVIOUS: default_https">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -352,19 +357,19 @@ fun main(args: Array&lt;String&gt;) {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/broadcastreceiver/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/broadcastreceiver/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/broadcastreceiver/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -395,9 +400,9 @@ fun main(args: Array&lt;String&gt;) {
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/aes_written_by_kotlin\/';
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/broadcastreceiver\/';
         
-          this.page.identifier = '\/2022\/03\/aes_written_by_kotlin\/'
+          this.page.identifier = '\/2022\/03\/broadcastreceiver\/'
         
       };
       (function() {
@@ -433,7 +438,7 @@ fun main(args: Array&lt;String&gt;) {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/auto_tasks/" data-tooltip="Auto_tasks" aria-label="NEXT: Auto_tasks">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/sqlite/" data-tooltip="SQLite" aria-label="NEXT: SQLite">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -441,7 +446,7 @@ fun main(args: Array&lt;String&gt;) {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/ui_controls/" data-tooltip="UI_controls" aria-label="PREVIOUS: UI_controls">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/default_https/" data-tooltip="default_https" aria-label="PREVIOUS: default_https">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -459,19 +464,19 @@ fun main(args: Array&lt;String&gt;) {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/broadcastreceiver/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/broadcastreceiver/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/broadcastreceiver/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -502,19 +507,19 @@ fun main(args: Array&lt;String&gt;) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Faes_written_by_kotlin%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fbroadcastreceiver%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Faes_written_by_kotlin%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fbroadcastreceiver%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Faes_written_by_kotlin%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fbroadcastreceiver%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>

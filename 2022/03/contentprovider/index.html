@@ -7,10 +7,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Aes_written_by_kotlin",
+  "headline": "ContentProvider",
   
-  "datePublished": "2022-03-04T02:46:35+08:00",
-  "dateModified": "2022-03-04T02:46:35+08:00",
+  "datePublished": "2022-03-30T20:38:15+08:00",
+  "dateModified": "2022-03-30T20:38:15+08:00",
   "author": {
     "@type": "Person",
     "name": "Zhang Gaojie",
@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/aes_written_by_kotlin\/" 
+    "@id": "https:\/\/zgjoget9.github.io\/2022\/03\/contentprovider\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -32,7 +32,7 @@
     }
     
   },
-  "description": "AES加密解密\n",
+  "description": "ContentProvider跨程序共享数据\n",
   "keywords": []
 }
 
@@ -43,25 +43,25 @@
 <meta name="generator" content="Hugo 0.92.2 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Zhang Gaojie">
 <meta name="keywords" content="">
-<meta name="description" content="AES加密解密">
+<meta name="description" content="ContentProvider跨程序共享数据">
 
 
-<meta property="og:description" content="AES加密解密">
+<meta property="og:description" content="ContentProvider跨程序共享数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Aes_written_by_kotlin">
-<meta name="twitter:title" content="Aes_written_by_kotlin">
-<meta property="og:url" content="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/">
-<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/">
+<meta property="og:title" content="ContentProvider">
+<meta name="twitter:title" content="ContentProvider">
+<meta property="og:url" content="https://zgjoget9.github.io/2022/03/contentprovider/">
+<meta property="twitter:url" content="https://zgjoget9.github.io/2022/03/contentprovider/">
 <meta property="og:site_name" content="Zhang Gaojie">
-<meta property="og:description" content="AES加密解密">
-<meta name="twitter:description" content="AES加密解密">
+<meta property="og:description" content="ContentProvider跨程序共享数据">
+<meta name="twitter:description" content="ContentProvider跨程序共享数据">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-03-04T02:46:35">
+    <meta property="article:published_time" content="2022-03-30T20:38:15">
   
   
-    <meta property="article:modified_time" content="2022-03-04T02:46:35">
+    <meta property="article:modified_time" content="2022-03-30T20:38:15">
   
   
   
@@ -84,14 +84,14 @@
 
 
 
-    <title>Aes_written_by_kotlin</title>
+    <title>ContentProvider</title>
 
     <link rel="icon" href="https://zgjoget9.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/">
+    <link rel="canonical" href="https://zgjoget9.github.io/2022/03/contentprovider/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -241,15 +241,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      Aes_written_by_kotlin
+      ContentProvider
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-03-04T02:46:35&#43;08:00">
+      <time datetime="2022-03-30T20:38:15&#43;08:00">
         
-  March 4, 2022
+  March 30, 2022
 
       </time>
     
@@ -260,56 +260,111 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>AES加密解密</p>
-<pre tabindex="0"><code>object AESCrypt{
+              <p>ContentProvider跨程序共享数据</p>
+<h3 id="contentprovider简介">ContentProvider简介</h3>
+<p>ContentProvider主要用于在不同的应用程序之间实现数据共享的功能，它提供了一套完整的机制，允许一个程序访问另一个程序中的数据，同时还能保证被访问数据的安全性。</p>
+<p>目前，使用ContentProvider是Android实现跨程序共享数据的标准方式。</p>
+<h3 id="运行时权限简介">运行时权限简介</h3>
+<p>在过去，Android系统的权限机制设计得非常简单，就是用户如果认可你所申请的权限，就会安装你的程序，如果不认可你所申请的权限，那么拒绝安装就可以了。</p>
+<p>而在Android 6.0系统中新增了运行时权限功能。</p>
+<p>现在用户不需要在安装软件的时候一次性授权所有申请的权限，而是可以在软件的使用过程中再对某一项权限申请进行授权。</p>
+<p>比如一款相机应用在运行时申请了地理位置定位权限，就算拒绝了这个权限，也应该可以使用这个应用的其他功能，而不是像之前那样直接无法安装它。</p>
+<h3 id="创建contentprovider的步骤">创建ContentProvider的步骤</h3>
+<p>ContentProvider类中有6个抽象方法，我们在使用子类继承它的时候，需要将这6个方法全部重写。</p>
+<pre tabindex="0"><code>class MyProvider : ContentProvider() {
 
-    //AES加密
-    fun encrypt(input:String,password:String): String{
-
-        //初始化cipher对象
-        val cipher = Cipher.getInstance(&quot;AES&quot;)
-        // 生成密钥
-        val keySpec:SecretKeySpec? = SecretKeySpec(password.toByteArray(),&quot;AES&quot;)
-        cipher.init(Cipher.ENCRYPT_MODE,keySpec)
-        //加密解密
-        val encrypt = cipher.doFinal(input.toByteArray())
-        val result = Base64.getEncoder().encode(encrypt)
-
-        return String(result)
+    override fun onCreate(): Boolean {
+        return false
     }
 
-    //AES解密
-    fun decrypt(input: String,password: String): String{
+    override fun query(uri: Uri, projection: Array&lt;String&gt;?, selection: String?, selectionArgs: Array&lt;String&gt;?, sortOrder: String?): Cursor? {
+        return null
+    }
 
-        //初始化cipher对象
-        val cipher = Cipher.getInstance(&quot;AES&quot;)
-        // 生成密钥
-        val keySpec:SecretKeySpec? = SecretKeySpec(password.toByteArray(),&quot;AES&quot;)
-        cipher.init(Cipher.DECRYPT_MODE,keySpec)
-        //加密解密
-        val encrypt = cipher.doFinal(Base64.getDecoder().decode(input.toByteArray()))
-        //AES解密不需要用Base64解码
-        val result = String(encrypt)
+    override fun insert(uri: Uri, values: ContentValues?): Uri? {
+        return null
+    }
 
-        return result
+    override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array&lt;String&gt;?): Int {
+        return 0
+    }
+
+    override fun delete(uri: Uri, selection: String?, selectionArgs: Array&lt;String&gt;?): Int {
+        return 0
+    }
+
+    override fun getType(uri: Uri): String? {
+        return null
     }
 
 }
+</code></pre><p>onCreate()。初始化ContentProvider的时候调用。通常会在这里完成对数据库的创建和升级等操作，返回true表示ContentProvider初始化成功，返回false则表示失败。</p>
+<p>query()。从ContentProvider中查询数据。uri参数用于确定查询哪张表，projection参数用于确定查询哪些列，selection和selectionArgs参数用于约束查询哪些行，sortOrder参数用于对结果进行排序，查询的结果存放在Cursor对象中返回。</p>
+<p>insert()。向ContentProvider中添加一条数据。uri参数用于确定要添加到的表，待添加的数据保存在values参数中。添加完成后，返回一个用于表示这条新记录的URI。</p>
+<p>update()。更新ContentProvider中已有的数据。uri参数用于确定更新哪一张表中的数据，新数据保存在values参数中，selection和selectionArgs参数用于约束更新哪些行，受影响的行数将作为返回值返回。</p>
+<p>delete()。从ContentProvider中删除数据。uri参数用于确定删除哪一张表中的数据，selection和selectionArgs参数用于约束删除哪些行，被删除的行数将作为返回值返回。</p>
+<p>getType()。根据传入的内容URI返回相应的MIME类型。</p>
+<p>借助UriMatcher这个类能够轻松地实现匹配内容URI的功能。当调用UriMatcher的match()方法时，可以将一个Uri对象传入，返回值是某个能够匹配这个Uri对象所对应的自定义代码，利用这个代码，就可以判断出调用方期望访问的是哪张表中的数据了。示例代码如下：</p>
+<pre tabindex="0"><code>class MyProvider : ContentProvider() {
+    private val table1Dir = 0
+    private val table1Item = 1
+    private val table2Dir = 2
+    private val table2Item = 3
+    private val uriMatcher = UriMatcher(UriMatcher.NO_MATCH)
 
-fun main(args: Array&lt;String&gt;) {
-
-    //一个英文字节占8bit,AES需要128bit，也就是需要16位长度
-    val password = &quot;1234567887654321&quot;//密钥
-    val input = &quot;AES加密解密测试&quot;
-
-    val encrypt = AESCrypt.encrypt(input, password)
-    val decrypt = AESCrypt.decrypt(encrypt, password)
-
-    println(&quot;AES加密结果:&quot;+encrypt)
-    println(&quot;AES解密结果:&quot;+decrypt)
-
+    init {
+        uriMatcher.addURI(&quot;com.example.app.provider&quot;, &quot;table1&quot;, table1Dir)
+        uriMatcher.addURI(&quot;com.example.app.provider &quot;, &quot;table1/#&quot;, table1Item)
+        uriMatcher.addURI(&quot;com.example.app.provider &quot;, &quot;table2&quot;, table2Dir)
+        uriMatcher.addURI(&quot;com.example.app.provider &quot;, &quot;table2/#&quot;, table2Item)
+    }
+    …
+    override fun query(uri: Uri, projection: Array&lt;String&gt;?, selection: String?, selectionArgs: Array&lt;String&gt;?, sortOrder: String?): Cursor? {
+        when (uriMatcher.match(uri)) {
+            table1Dir -&gt; {
+                // 查询table1表中的所有数据
+            }
+            table1Item -&gt; {
+                // 查询table1表中的单条数据
+            }
+            table2Dir -&gt; {
+                // 查询table2表中的所有数据
+            }
+            table2Item -&gt; {
+                // 查询table2表中的单条数据
+            }
+        }
+        …
+    }
+    …
 }
-</code></pre>
+
+</code></pre><p>getType()方法是所有的ContentProvider都必须提供的一个方法，用于获取Uri对象所对应的MIME类型。一个内容URI所对应的MIME字符串主要由3部分组成，Android对这3个部分做了如下格式规定。</p>
+<ul>
+<li>
+<p>必须以vnd开头。</p>
+</li>
+<li>
+<p>如果内容URI以路径结尾，则后接android.cursor.dir/；如果内容URI以id结尾，则后接android.cursor.item/。</p>
+</li>
+<li>
+<p>最后接上vnd.<!-- raw HTML omitted -->.<!-- raw HTML omitted -->。</p>
+</li>
+</ul>
+<p>所以，对于content://com.example.app.provider/table1这个内容URI，它所对应的MIME类型就可以写成：vnd.android.cursor.dir/vnd.com.example.app.provider.table1</p>
+<p>对于content://com.example.app.provider/table1/1这个内容URI，它所对应的MIME类型就可以写成：vnd.android.cursor.item/vnd.com.example.app.provider.table1</p>
+<p>getType()方法中的逻辑，如下所示：</p>
+<pre tabindex="0"><code>class MyProvider : ContentProvider() {
+    …
+    override fun getType(uri: Uri) = when (uriMatcher.match(uri)) {
+            table1Dir -&gt; &quot;vnd.android.cursor.dir/vnd.com.example.app.provider.table1&quot;
+            table1Item -&gt; &quot;vnd.android.cursor.item/vnd.com.example.app.provider.table1&quot;
+            table2Dir -&gt; &quot;vnd.android.cursor.dir/vnd.com.example.app.provider.table2&quot;
+            table2Item -&gt; &quot;vnd.android.cursor.item/vnd.com.example.app.provider.table2&quot;
+            else -&gt; null
+    }
+}
+</code></pre><h3 id="kotin课堂-泛型编程">kotin课堂 泛型编程</h3>
               
 
 
@@ -326,7 +381,7 @@ fun main(args: Array&lt;String&gt;) {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/auto_tasks/" data-tooltip="Auto_tasks" aria-label="NEXT: Auto_tasks">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/multimedia/" data-tooltip="Multimedia" aria-label="NEXT: Multimedia">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -334,7 +389,7 @@ fun main(args: Array&lt;String&gt;) {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/ui_controls/" data-tooltip="UI_controls" aria-label="PREVIOUS: UI_controls">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/sqlite/" data-tooltip="SQLite" aria-label="PREVIOUS: SQLite">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -352,19 +407,19 @@ fun main(args: Array&lt;String&gt;) {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/contentprovider/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/contentprovider/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/contentprovider/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -395,9 +450,9 @@ fun main(args: Array&lt;String&gt;) {
     </div>
     <script type="text/javascript">
       var disqus_config = function() {
-        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/aes_written_by_kotlin\/';
+        this.page.url = 'https:\/\/zgjoget9.github.io\/2022\/03\/contentprovider\/';
         
-          this.page.identifier = '\/2022\/03\/aes_written_by_kotlin\/'
+          this.page.identifier = '\/2022\/03\/contentprovider\/'
         
       };
       (function() {
@@ -433,7 +488,7 @@ fun main(args: Array&lt;String&gt;) {
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/auto_tasks/" data-tooltip="Auto_tasks" aria-label="NEXT: Auto_tasks">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/multimedia/" data-tooltip="Multimedia" aria-label="NEXT: Multimedia">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -441,7 +496,7 @@ fun main(args: Array&lt;String&gt;) {
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/ui_controls/" data-tooltip="UI_controls" aria-label="PREVIOUS: UI_controls">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://zgjoget9.github.io/2022/03/sqlite/" data-tooltip="SQLite" aria-label="PREVIOUS: SQLite">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -459,19 +514,19 @@ fun main(args: Array&lt;String&gt;) {
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zgjoget9.github.io/2022/03/contentprovider/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zgjoget9.github.io/2022/03/contentprovider/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/aes_written_by_kotlin/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://zgjoget9.github.io/2022/03/contentprovider/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
@@ -502,19 +557,19 @@ fun main(args: Array&lt;String&gt;) {
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Faes_written_by_kotlin%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fcontentprovider%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Faes_written_by_kotlin%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fcontentprovider%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Faes_written_by_kotlin%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fzgjoget9.github.io%2F2022%2F03%2Fcontentprovider%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
