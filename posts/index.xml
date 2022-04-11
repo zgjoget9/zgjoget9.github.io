@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Zhang Gaojie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Apr 2022 20:38:23 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Apr 2022 09:33:55 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PicGo</title>
+      <link>https://zgjoget9.github.io/2022/04/picgo/</link>
+      <pubDate>Tue, 05 Apr 2022 09:33:55 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/04/picgo/</guid>
+      <description>&lt;p&gt;在使用基于hugo的静态网站时，我们常常要考虑markdown图片的存储问题&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Android_11_web</title>
       <link>https://zgjoget9.github.io/2022/04/android_11_web/</link>
