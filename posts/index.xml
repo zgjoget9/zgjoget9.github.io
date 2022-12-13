@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Zhang Gaojie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jun 2022 18:29:03 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Jun 2022 10:13:09 +0800</lastBuildDate><atom:link href="https://zgjoget9.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sunny_weather</title>
+      <link>https://zgjoget9.github.io/2022/06/sunny_weather/</link>
+      <pubDate>Tue, 21 Jun 2022 10:13:09 +0800</pubDate>
+      
+      <guid>https://zgjoget9.github.io/2022/06/sunny_weather/</guid>
+      <description>&lt;p&gt;基于彩云api的天气预报App&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>6_16</title>
       <link>https://zgjoget9.github.io/2022/06/6_16/</link>
@@ -329,15 +338,6 @@
       
       <guid>https://zgjoget9.github.io/2022/01/why_i_choose_hugo_instead_of_hexo/</guid>
       <description>&lt;p&gt;2019年，我开始学习网站的搭建。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://zgjoget9.github.io/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zgjoget9.github.io/1/01/</guid>
-      <description></description>
     </item>
     
   </channel>
